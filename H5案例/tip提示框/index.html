@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>tip tools</title>
+    <base target="_blank" />
+    <meta name="Keywords" content="tip tools" />
+    <meta name="Description" content="tip tools" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+    <link rel="stylesheet" href="just-tip.css">
+    <script src="justTools.js"></script>
+
+    <style>
+        .demo {
+            border: 1px solid #ccc;
+            background: #f0f0f0;
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            margin: 10px;
+        }
+
+        .abc {
+            background: green;
+            border: 1px solid green;
+        }
+
+        .abc .just-top {
+            border-top-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <br/> 2,修复了事件点击和mouseover多次绑定问题
+        <br/>
+        <h1>插件设置</h1>
+        height:"auto", //高
+        <br/> width:"auto", //宽
+        <br/> contents:'',//内容
+        <br/> gravity: 'top', //top, left, bottom, right
+        <br/> theme: '',//自定义风格
+        <br/> animation: 'none', //none, fadeIn, flipIn, moveInLeft, moveInTop, moveInBottom, moveInRight
+        <br/> yes: '确定', //确定按钮文字
+        <br/> no: '取消',//取消按钮文字
+        <br/> onYes:"", //必须function方法 确定回调 (返回ture，关闭tools)
+        <br/> onNo:"", //必须function方法 取消回调
+    </div>
+
+    <div class="demo demoUp">上边提示</div>
+    <div class="demo demoDown">下边提示</div>
+    <div class="demo demoLeft">左边提示</div>
+    <div class="demo demoRight">右边提示</div>
+
+    <div class="demo demoStyle1">提示动画1</div>
+    <div class="demo demoStyle2">提示动画2</div>
+    <br/>
+    <div class="demo demoStyle3">提示动画3</div>
+    <div class="demo demoStyle4">提示动画4</div>
+    <div class="demo demoStyle5">click提示动画5</div>
+
+    <div class="demo justConfirm">click Confirm</div>
+
+    <script>
+        $(".demoUp").mouseover(function () {
+            var _this = $(this);
+            _this.justToolsTip({
+                animation: "moveInTop",
+                width: "500px",
+                contents: _this.text(),
+                gravity: 'top'
+            });
+        })
+
+        /*
+        	$(".demoUp").click(function(event){
+        		$.justToolsTip({
+        			events:event,
+        	        animation:"moveInTop",
+        	        width:"500px",
+        	        contents:$(this).text(),
+        	        gravity:'top'
+        	    });
+        	})
+        */
+
+        $(".demoDown").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "moveInBottom",
+                //width:"300px",
+                contents: $(this).text(),
+                gravity: 'bottom'
+            });
+        })
+
+        $(".demoLeft").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "moveInLeft",
+                //width:"300px",
+                contents: $(this).text(),
+                gravity: 'left'
+            });
+        })
+        $(".demoRight").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "moveInRight",
+                //width:"300px",
+                contents: $(this).text(),
+                gravity: 'right'
+            });
+        })
+
+
+        $(".demoStyle1").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "fadeIn",
+                contents: $(this).text(),
+                width: "600px",
+                theme: "abc",
+                gravity: 'top'
+            });
+        })
+
+        $(".demoStyle2").click(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "flipIn",
+                height: "400px",
+                contents: $(this).text(),
+                gravity: 'top'
+            });
+        })
+
+        $(".demoStyle3").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "flipIn",
+                //width:"300px",
+                contents: $(this).text(),
+                gravity: 'top'
+            });
+        })
+
+        $(".demoStyle4").mouseover(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "flipIn",
+                //width:"300px",
+                contents: $(this).text(),
+                gravity: 'bottom'
+            });
+        })
+
+
+        $(".demoStyle5").click(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                events: event,
+                animation: "flipIn",
+                contents: $(this).text(),
+                gravity: 'right'
+            });
+        })
+
+
+
+        $(".justConfirm").click(function (event) {
+            var _this = $(this);
+            _this.justToolsTip({
+                confirm: true,
+                animation: "moveInTop",
+                contents: "确定要删除吗？",
+                gravity: 'top',
+                onYes: function (self) {
+                    console.log(self);
+                    alert("Yes 返回个ture为关闭");
+                    //return true;
+                },
+                onNo: function (self) {
+                    console.log(self);
+                    //alert("NO")
+                }
+            })
+            //console.log(abc);
+        })
+    </script>
+
+</body>
+
+</html>

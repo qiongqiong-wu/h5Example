@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	/>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<title>手机端上拉查看详情</title>
+	<style type="text/css">
+		.tab {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			box-sizing: border-box;
+			background-color: #ededed;
+		}
+
+		.tab .tab_box {
+			width: 100%;
+			/*height: 50px;*/
+			box-sizing: border-box;
+		}
+
+		.tab .tab_box li {
+			float: left;
+			width: 50%;
+			padding: 0 10px;
+			height: 45px;
+			line-height: 45px;
+			display: block;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		.tab .tab_box li.active {
+			border-bottom: 1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="tab">
+		<ul class="tab_box">
+			<li class="active">商品</li>
+			<li>详情</li>
+		</ul>
+	</div>
+	<div class="tab_list">
+		<div id="wrapper" class="tab_cont">
+			<div class="scroller">
+				<ul>
+					<li>商品信息商品信息商品信息商品信息</li>
+					<li>商品信息商品信息商品信息商品信息</li>
+					<li>商品信息商品信息商品信息商品信息</li>
+					<li>商品信息商品信息商品信息商品信息</li>
+					<li>商品信息商品信息商品信息商品信息</li>
+				</ul>
+				<div class="more">
+					<i class="pull_icon"></i>
+					<span>上拉查看详情...</span>
+				</div>
+			</div>
+		</div>
+		<div class="tab_cont" style="display: none;margin-top: 40px;font-size: 18px;padding: 10px;">
+			详情详情详情详情详情详情详情详情详情详情详情详情详情
+		</div>
+	</div>
+	<footer>这是底部</footer>
+	<script>
+		var myscroll = new iScroll("wrapper", {
+			onScrollMove: function () {
+				// console.log(this.y);
+				// console.log(this.maxScrollY);
+				if ((this.y + 70) < (this.maxScrollY)) {
+					$('.pull_icon').addClass('flip');
+				} else {
+					$('.pull_icon').removeClass('flip loading');
+				}
+			},
+			onScrollEnd: function () {
+				if ($('.pull_icon').hasClass('flip')) {
+					pullUpAction();
+				}
+			},
+			onRefresh: function () {
+				$('.more').removeClass('flip');
+			}
+
+		});
+
+		function pullUpAction() {
+			setTimeout(function () {
+				// console.log(11111111);
+				$('.tab_box li').eq(0).removeClass('active');
+				$('.tab_box li').eq(1).addClass('active');
+				$('.tab_cont').hide();
+				$('.tab_cont').eq(1).show();
+				// myscroll.refresh();
+			}, 400)
+		}
+		if ($('.scroller').height() < $('#wrapper').height()) {
+			$('.more').hide();
+			myscroll.destroy();
+		}
+		$('.tab_box li').on('click', function () {
+			$(this).siblings('li').removeClass('active');
+			$(this).addClass('active');
+			var index = $(this).index();
+			// console.log(index);
+			$('.tab_cont').hide();
+			$('.tab_cont').eq(index).show();
+		})
+	</script>
+</body>
+
+</html>

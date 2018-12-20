@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>收银台</title>
+		<!-- 说明 -->
+		<meta name="description" content="收银台" />
+		<!-- 关键字 -->
+		<meta name="keywords" content="收银台" />
+		<!-- 设置文档宽度、是否缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-mobile-web-app-title" content="收银台" />
+
+		<title>收银台</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/paymentOptions.css" />
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = "orientationchange" in window ? "orientationchange" :
+					"resize",
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) {
+							return
+						}
+						if(clientWidth >= 750) {
+							docEl.style.fontSize = "100px"
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 750) + "px"
+						}
+					};
+				if(!doc.addEventListener) {
+					return
+				}
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener("DOMContentLoaded", recalc, false)
+			})(document, window);
+		</script>
+	</head>
+
+	<body>
+		<div class="warp">
+			<div class="header">
+				<div class="menu-left">
+				</div>
+				<div class="menu-title">
+					收银台
+				</div>
+				<!--<div class="menu-right">
+				</div>-->
+			</div>
+
+			<div class="content">
+				<div class="transaction-password">
+					<div class="item-value fl">
+						交易密码
+					</div>
+					<div class="item-right fr">
+					</div>
+				</div>
+			</div>
+
+			<div class="fl-shadow">
+				<div class="bg-shadow"></div>
+				<div class="shadow-box">
+					<div class="shadow-titlebar">
+						<div class="st close fl"></div>
+						<div class="st title">
+							选择付款方式
+						</div>
+					</div>
+					<div class="shadow-content">
+						<ul>
+							<li>
+								<div class="item-logo wc fl">
+								</div>
+								<div class="item-value fl">
+									微信支付
+								</div>
+								<div class="item-operate choice fr">
+								</div>
+							</li>
+
+							<li class="bank">
+								<div class="item-logo add-bc fl">
+								</div>
+								<div class="item-value fl">浦发银行储蓄卡（5071）</div>
+								<div class="item-operate fr">
+								</div>
+							</li>
+
+							<li class="bank">
+								<div class="item-logo add-bc fl">
+								</div>
+								<div class="item-value fl">浦发银行储蓄卡（5071）</div>
+								<div class="item-operate fr">
+								</div>
+							</li>
+
+							<li>
+								<div class="item-logo add-bc fl">
+								</div>
+								<div class="item-value fl">
+									添加支付银行卡
+								</div>
+								<div class="item-operate add fr">
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/paymentOptions.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

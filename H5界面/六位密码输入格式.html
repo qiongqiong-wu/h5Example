@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>自动跳格输入-jq22.com</title>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<style>
+			body {
+				background-color: #EBEBEB
+			}
+
+			input {
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid red;
+				margin-right: 20px;
+				text-align: center
+			}
+		</style>
+	</head>
+
+	<body>
+		<h3>这是一个简单的点击效果</h3>
+
+		<div class="js_input">
+			<input type="text" value="">
+			<input type="text" value="">
+			<input type="text" value="">
+			<input type="text" value="">
+			<input type="text" value="">
+			<input type="text" value="">
+		</div>
+
+		<script>
+			$(document).ready(function() {
+
+				$(".js_input input").on("input propertychange", function() {
+					$(this).val($(this).val().replace(/[^a-zA-Z0-9]+/g, ""));
+					suny($(this));
+					console.log($(this).val())
+					getVal();
+				});
+
+				function suny(input) {
+					var curval = input.val().length;
+					if(curval > 1) {
+						var tempval = input.val().slice(1);
+						input.val(input.val().slice(0, 1));
+						if(input.index() != 5) {
+							input.next().focus();
+							var nextval = input.next().val();
+							var newnextval = tempval += nextval;
+							input.next().val(newnextval);
+							if(newnextval.length > 1) {
+								suny(input.next());
+							}
+						}
+					}
+				}
+
+				function getVal() {
+					//通过jq获得input数组
+					//					var $inputArr = $('input');
+					//					//循环处理input,并定义结果集
+					//					var result = [];
+					//					$inputArr.each(function() {
+					//						//将每个input的值放进结果集
+					//						result.push($(this).val());
+					//					});
+
+					var valArr = $('input').map(function() {
+						return $(this).val()
+					}).get();
+					console.log(valArr);
+				}
+
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,520 @@
+.bubble {
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 100px;
+    color: #fff;
+    background: #ddd;
+    border-radius: 0.1rem;
+    border: 1px solid currentcolor;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*奇数*/
+.bubble div:nth-child(odd) span {
+    position: absolute;
+    left: -35px;
+    width: 80px;
+    height: 16px;
+    color: #333;
+    
+}
+
+/*偶数*/
+.bubble div:nth-child(even) span {
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    width: 80px;
+    height: 16px;
+    color: #333;
+}
+
+
+/*上左*/
+
+.bubble .bubble-top-left {
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 32px 32px 0 0;
+    color: #dddddd;
+}
+
+
+/*上右*/
+
+.bubble .bubble-top-right {
+    position: absolute;
+    bottom: 100%;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #dddddd;
+}
+
+
+/*下左*/
+
+.bubble .bubble-bottom-left {
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #dddddd;
+}
+
+
+/*下右*/
+
+.bubble .bubble-bottom-right {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #dddddd;
+}
+
+
+/*左上*/
+
+.bubble .bubble-left-top {
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #dddddd;
+}
+
+
+/*左下*/
+
+.bubble .bubble-left-bottom {
+    position: absolute;
+    right: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #dddddd;
+}
+
+
+/*右上*/
+
+.bubble .bubble-right-top {
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #dddddd;
+}
+
+
+/*右下*/
+
+.bubble .bubble-right-bottom {
+    position: absolute;
+    left: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #dddddd;
+}
+
+.bubbleTail-before {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 80px;
+    border: 1px dashed #0074D9;
+}
+
+.bubbleTail-before div {
+    position: relative;
+    width: 35%;
+    height: 60px;
+    color: #fff;
+    background: #0074D9;
+    border-radius: 0.1rem;
+    border: 1px solid currentcolor;
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+/*上左*/
+
+.bubbleTail-top-left:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #0074D9;
+}
+
+
+/*上右*/
+
+.bubbleTail-top-right:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #0074D9;
+}
+
+
+/*下左*/
+
+.bubbleTail-bottom-left:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #0074D9;
+}
+
+
+/*下右*/
+
+.bubbleTail-bottom-right:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #0074D9;
+}
+
+
+/*左上*/
+
+.bubbleTail-left-top:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #0074D9;
+}
+
+
+/*左下*/
+
+.bubbleTail-left-bottom:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #0074D9;
+}
+
+
+/*右上*/
+
+.bubbleTail-right-top:before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #0074D9;
+}
+
+
+/*右下*/
+
+.bubbleTail-right-bottom:before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #0074D9;
+}
+
+.bubblebox-after {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 80px;
+    border: 1px dashed #FF0000;
+}
+
+.bubblebox-after div {
+    position: relative;
+    width: 35%;
+    height: 60px;
+    color: #fff;
+    background: #ff0000;
+    border-radius: 0.1rem;
+    border: 1px solid currentcolor;
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+/*上左*/
+
+.bubblebox-top-left:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #FF0000;
+}
+
+
+/*上右*/
+
+.bubblebox-top-right:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #FF0000;
+}
+
+
+/*下左*/
+
+.bubblebox-bottom-left:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #FF0000;
+}
+
+
+/*下右*/
+
+.bubblebox-bottom-right:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 10px;
+    border-left-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #FF0000;
+}
+
+
+/*左上*/
+
+.bubblebox-left-top:after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 0 32px;
+    color: #FF0000;
+}
+
+
+/*左下*/
+
+.bubblebox-left-bottom:after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 32px 0 0 0;
+    color: #FF0000;
+}
+
+
+/*右上*/
+
+.bubblebox-right-top:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-width: 10px;
+    border-bottom-color: currentColor;
+    border-radius: 0 0 32px 0;
+    color: #FF0000;
+}
+
+
+/*右下*/
+
+.bubblebox-right-bottom:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 10px;
+    border-top-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #FF0000;
+}

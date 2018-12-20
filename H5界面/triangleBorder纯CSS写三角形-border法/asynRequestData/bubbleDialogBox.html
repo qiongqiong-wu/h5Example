@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>气泡对话框</title>
+		<meta name="author" content="jQuery" />
+		<meta name="description" content="气泡对话框" />
+		<meta name="keywords" content="气泡对话框" />
+		<meta name="apple-mobile-web-app-title" content="气泡对话框" />
+		<!-- 适应移动端start -->
+		<!-- width viewport 宽度(数值/device-width)
+        height viewport 高度(数值/device-height)
+        initial-scale 初始缩放比例
+        maximum-scale 最大缩放比例
+        minimum-scale 最小缩放比例
+        user-scalable 是否允许用户缩放(yes/no)
+        minimal-ui iOS 7.1 beta 2 中新增属性，在页面加载时最小化上下状态栏
+     -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+		/>
+		<!-- 删除苹果默认的工具栏和菜单栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 设置苹果工具栏颜色 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+		<meta name="format-detection" content="telphone=no, email=no" />
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--	<meta http-equiv="X-Frame-Options" content="ALLOW-FROM URI">-->
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 适应移动端end -->
+		<!-- 浏览网站时的小图标 -->
+		<link href="images/app_logo.png" rel="shortcut icon" type="/image/x-icon" />
+		<!-- 添加至主屏时的图片 -->
+		<link href="images/app_logo.png" rel="apple-touch-icon-precomposed" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/bubbleDialogBox.css" /> </head>
+
+	<body>
+		<!--loading页开始-->
+		<div class="loading">
+			<div class="loader"> </div>
+		</div>
+		<div class="warp">
+			<div class="header">
+				<div class="navbar flexbox justifly">
+					<div class="nav_menu nav_left fl"></div>
+					<div class="nav_title tc">气泡对话框</div>
+					<div class="nav_menu nav_right fr hidden"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="bubble"> 气泡对话框
+					<div class="bubble-top-left"> <span>上左:</span> </div>
+					<div class="bubble-top-right"><span>上右:</span></div>
+					<div class="bubble-bottom-left"><span>下左:</span></div>
+					<div class="bubble-bottom-right"><span>下右:</span></div>
+					<div class="bubble-left-top"><span>左上:</span></div>
+					<div class="bubble-left-bottom"><span>左下:</span></div>
+					<div class="bubble-right-top"><span>右上:</span></div>
+					<div class="bubble-right-bottom"><span>右下:</span></div>
+				</div>
+				<div class="bubbleTail-before">
+					<div class="bubbleTail-top-left"> 上左:</div>
+					<div class="bubbleTail-top-right">上右:</div>
+					<div class="bubbleTail-bottom-left">下左:</div>
+					<div class="bubbleTail-bottom-right">下右:</div>
+					<div class="bubbleTail-left-top">左上:</div>
+					<div class="bubbleTail-left-bottom">左下:</div>
+					<div class="bubbleTail-right-top">右上:</div>
+					<div class="bubbleTail-right-bottom">右下:</div>
+				</div>
+				<div class="bubblebox-after">
+					<div class="bubblebox-top-left"> 上左:</div>
+					<div class="bubblebox-top-right">上右:</div>
+					<div class="bubblebox-bottom-left">下左:</div>
+					<div class="bubblebox-bottom-right">下右:</div>
+					<div class="bubblebox-left-top">左上:</div>
+					<div class="bubblebox-left-bottom">左下:</div>
+					<div class="bubblebox-right-top">右上:</div>
+					<div class="bubblebox-right-bottom">右下:</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/screenAdaptation.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$( function () {
+				var divHeight = $( '.header' ).height();
+				console.log( divHeight )
+				var w = window.screen.availWidth;
+				var h = window.screen.availHeight;
+				console.log( w, h )
+				$( '.container' ).css( 'min-height', h - divHeight + 'px' )
+			} )
+		</script>
+	</body>
+
+</html>

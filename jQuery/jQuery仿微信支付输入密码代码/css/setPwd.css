@@ -1,0 +1,243 @@
+.content {
+	text-align: center;
+	font-size: 0.32rem;
+	padding: 1.20rem 0;
+}
+
+.zhifu-price {
+	font-size: 0.9rem;
+}
+
+.btn-panyment {
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 0.06rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	background: #44bf16;
+	display: block;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #fff;
+}
+
+/*浮动层*/
+.keyboard-title {
+	height: 0.80rem;
+	font-size: 0.32rem;
+	overflow: hidden;
+}
+
+.keyboard-title:after {
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+.keyboard-title a {
+	display: block;
+	width: 10%;
+	padding: 0.20rem 0;
+	text-align: center;
+}
+
+.keyboard-title .close {
+	width: 0.8rem;
+	height: 0.80rem;
+	background: url('../images/back.png') no-repeat center;
+	background-size: 0.22rem 0.40rem;
+}
+
+.keyboard-title .cancel {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	width: 0.8rem;
+	height: 0.80rem;
+	background: url('../images/cancel.png') no-repeat center;
+	background-size: 0.48rem 0.80rem;
+}
+
+.keyboard-title .set-pwd {
+	width: calc(100% - 2.40rem);
+	line-height: 0.80rem;
+	padding: 0 1.2rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.32rem;
+	color: #323232;
+	text-align: center;
+}
+
+.input-pwd {
+	float: left;
+	width: 100%;
+	font-family: PingFangSC-Regular;
+	font-size: 0.22rem;
+	color: #9E9E9E;
+	text-align: center;
+	padding-bottom: 0.20rem;
+}
+
+.pwd-box {
+	width: 89%;
+	margin: 0.20rem auto;
+	height: 0.80rem;
+	overflow: hidden;
+	border: 1px solid #bebebe;
+}
+
+.pwd-box li {
+	border-right: 1px solid #efefef;
+	height: 0.80rem;
+	float: left;
+	width: 16.3%;
+	background: #FFF;
+}
+
+.pwd-box li.pwd-invisible {
+	background: #FFF url('../images/pwd_invisible.jpg') no-repeat center;
+	background-size: 25%;
+}
+
+.pwd-box li:last-child {
+	border-right: none;
+}
+
+.forget-pwd {
+	font-family: PingFangSC-Regular;
+	font-size: 0.28rem;
+	color: #646464;
+	text-align: right;
+	padding-right: 0.34rem;
+}
+
+.numeric-keyboard {
+	border: 1px solid #dadada;
+	overflow: hidden;
+	border-top: none;
+	border-bottom: none;
+	padding-top: 0.20rem;
+}
+
+.numeric-keyboard li {
+	width: 33.3333%;
+	border-bottom: 1px solid #dadada;
+	float: left;
+	text-align: center;
+	font-size: 0.44rem;
+}
+
+.numeric-keyboard li a {
+	display: block;
+	color: #000;
+	height: 1.0rem;
+	line-height: 1.0rem;
+	overflow: hidden;
+}
+
+.numeric-keyboard li a:active {
+	background: #e0e0e0;
+}
+
+.numeric-keyboard li a.zj-x {
+	border-left: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+}
+
+.numeric-keyboard li a.zf-empty {
+	background: #D5D8DB;
+}
+
+.numeric-keyboard li a.zf-del {
+	background: #D5D8DB url('../images/delete.png') no-repeat center;
+	background-size: 0.76rem 0.42rem;
+}
+
+.payment-status {
+	margin: 1.60rem auto 1.23rem;
+	text-align: center;
+}
+
+.status-sign {
+	display: inline-block;
+	width: 1.30rem;
+	height: 1.30rem;
+}
+
+.refer {
+	background: url(../images/refer.png) no-repeat center;
+	background-size: 1.30rem 1.30rem;
+}
+
+.refer-success {
+	background: url(../images/refer_success.png) no-repeat center;
+	background-size: 1.30rem 1.30rem;
+}
+
+.refer-error {
+	background: url(../images/refer_error.png) no-repeat center;
+	background-size: 1.30rem 1.30rem;
+}
+
+.staus-value {
+	font-family: PingFangSC-Regular;
+	font-size: 0.36rem;
+	color: #323232;
+	text-align: center;
+	padding-top: 0.25rem;
+	line-height: 0.36rem;
+}
+
+.dialog {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.dialog-box {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	height: 3.02rem;
+	margin: 0 15%;
+	border-radius: 0.16rem;
+	background: #fff;
+}
+
+.dialog-content {
+	font-family: PingFangSC-Regular;
+	font-size: 0.36rem;
+	color: #323232;
+	text-align: center;
+	padding: 0.8rem 0;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+.dialog-btn {
+	display: flex;
+	height: initial;
+	text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 0.36rem;
+	color: #323232;
+}
+
+.btn-reinput {
+	flex: 1;
+	padding: 0.22rem 0;
+	border-right: 1px solid #BEBEBE;
+}
+
+.btn-forgetpwd {
+	flex: 1;
+	padding: 0.22rem 0;
+	color: #ff0000;
+}

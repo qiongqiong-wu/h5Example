@@ -1,0 +1,222 @@
+/********************common-css公共样式初始化*********************/
+
+@charset "utf-8";
+@media screen and (max-width:320px) {
+    html,
+    body {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    html,
+    body {
+        font-size: 25px
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:375px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:414px) {
+    html,
+    body {
+        font-size: 13px
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:639px) {
+    html,
+    body {
+        font-size: 15px
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+    html,
+    body {
+        font-size: 20px
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:749px) {
+    html,
+    body {
+        font-size: 22.5px
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:799px) {
+    html,
+    body {
+        font-size: 23.5px
+    }
+}
+
+
+/* animation */
+
+
+/* 淡入 */
+
+.a-fadein {
+    -webkit-animation-name: fadein;
+    -moz-animation-name: fadein;
+    -ms-animation-name: fadein;
+    animation-name: fadein;
+}
+
+
+/* define */
+
+
+/* 淡入 */
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Verdana, Tahoma, "宋体", Helvetica, sans-serif;
+    line-height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #323232;
+    font-size: 0.14rem;
+    background: #fff;
+}
+
+.warp {
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0.88rem;
+    background: #fff;
+    z-index: 999;
+    border-bottom: 1px solid #B7B7B7;
+}
+
+.navbar {
+    height: 100%;
+    color: #323232;
+}
+
+.justifly {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.nav_menu {
+    width: 0.88rem;
+    height: 0.88rem;
+}
+
+.nav_left {
+    background: url('../images/icon_back.png') center no-repeat;
+    background-size: 0.25rem 0.42rem;
+}
+
+.nav_right {
+    background: url('../images/icon_refresh.png') center no-repeat;
+    background-size: 0.41rem 0.41rem;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: auto!important;
+    top: 0.88rem;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.footer:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    left: 0;
+    top: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    background-color: #b7b7b7;
+    height: 1px;
+    z-index: 2;
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/load.gif') 50% 50% no-repeat rgb(249, 249, 249);
+}

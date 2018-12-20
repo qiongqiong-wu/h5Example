@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>textarea</title>
+		<style type="text/css">
+			.textarea {
+				width: 400px;
+				min-height: 20px;
+				max-height: 300px;
+				_height: 120px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 3px;
+				outline: 0;
+				border: 1px solid #a0b3d6;
+				font-size: 12px;
+				line-height: 24px;
+				padding: 2px;
+				word-wrap: break-word;
+				overflow-x: hidden;
+				overflow-y: auto;
+
+				border-color: rgba(82, 168, 236, 0.8);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+			}
+
+			#textarea {
+				display: block;
+				margin: 20px auto;
+				overflow: hidden;
+				width: 400px;
+				font-size: 14px;
+				height: 18px;
+				line-height: 24px;
+				padding: 2px;
+			}
+
+			textarea {
+				outline: 0 none;
+				border-color: rgba(82, 168, 236, 0.8);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="textarea" contenteditable="true"><br /></div>
+
+		<textarea id="textarea" placeholder="回复内容"></textarea>
+
+		<script src='js/autoTextarea.js' type="text/javascript" charset="utf-8"></script>
+		<script>
+			var text = document.getElementById("textarea");
+			autoTextarea(text); // 调用
+		</script>
+	</body>
+</html>

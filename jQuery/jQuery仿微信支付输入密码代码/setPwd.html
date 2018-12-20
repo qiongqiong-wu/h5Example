@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>设置支付密码</title>
+		<!-- 说明 -->
+		<meta name="description" content="设置支付密码" />
+		<!-- 关键字 -->
+		<meta name="keywords" content="设置支付密码" />
+		<!-- 设置文档宽度、是否缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-mobile-web-app-title" content="设置支付密码" />
+
+		<title>设置支付密码</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/setPwd.css" />
+
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = "orientationchange" in window ? "orientationchange" :
+					"resize",
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) {
+							return
+						}
+						if(clientWidth >= 750) {
+							docEl.style.fontSize = "100px"
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 750) + "px"
+						}
+					};
+				if(!doc.addEventListener) {
+					return
+				}
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener("DOMContentLoaded", recalc, false)
+			})(document, window);
+		</script>
+		</script>
+
+	</head>
+
+	<body>
+		<div class="warp">
+			<div class="header">
+				<div class="menu-left">
+				</div>
+				<div class="menu-title">
+					支付
+				</div>
+			</div>
+			<div class="content">
+				<div class="input-pwd">测试商城</div>
+				<div class="zhifu-price">￥88.88</div>
+				<div class="btn-panyment">立即支付</div>
+			</div>
+
+			<!--浮动层-->
+			<div class="fl-shadow">
+				<div class="shadow-box">
+					<div class="shadow-titlebar">
+						<div class="st close fl"></div>
+						<div class="st title">请设置交易密码</div>
+						<div class="st cancel fr"></div>
+					</div>
+					<div class="shadow-content">
+						<div class="input-pwd">请输入六位交易密码</div>
+						<ul class="pwd-box">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="forget-pwd">忘记密码？</div>
+						<ul class="numeric-keyboard">
+							<li>
+								<a href="javascript:void(0);" class="zf-num">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zj-x zf-num">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-num">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-num">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zj-x zf-num">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-num">6</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-num">7</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zj-x zf-num">8</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-num">9</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-empty"></a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zj-x zf-num">0</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="zf-del"></a>
+							</li>
+						</ul>
+
+						<div class="payment-status" style="display: none;">
+							<div class="status-sign refer">
+							</div>
+							<div class="staus-value">
+								正在提交
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg-shadow"></div>
+			</div>
+		</div>
+
+		<div class="dialog" style="display: none;">
+			<div class="bg-shadow"></div>
+			<div class="dialog-box">
+				<div class="dialog-content">
+					支付密码不正确
+				</div>
+				<div class="dialog-btn">
+					<div class="btn-reinput">
+						重新输入
+					</div>
+					<div class="btn-forgetpwd">
+						忘记密码
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/setPwd.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

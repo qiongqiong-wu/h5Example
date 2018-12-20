@@ -1,0 +1,59 @@
+body {
+    margin: 0 auto;
+    text-align: center
+}
+
+div#frame {
+    margin: 0 auto;
+    width: 500px;
+    height: 350px;
+    border: #000 solid 10px;
+    position: relative;
+    overflow: hidden
+}
+
+div#container {
+    position: relative;
+    width: 3000px;
+    height: 350px
+}
+
+div.box {
+    float: left;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    visibility: hidden
+}
+
+#loading {
+    display: none;
+    position: absolute;
+    height: 234px;
+    width: 234px;
+    margin-top: -117px;
+    margin-left: -117px;
+    left: 50%;
+    top: 50%;
+    background: transparent url(../images/loading.gif) no-repeat 100% 100%
+}
+
+div#next {
+    width: 3em;
+    height: 5em;
+    top: 50%;
+    margin-top: -2.5em;
+    right: 0;
+    position: absolute;
+    background: transparent url(../images/next.png)
+}
+
+div#prev {
+    width: 3em;
+    height: 5em;
+    left: 0;
+    top: 50%;
+    margin-top: -2.5em;
+    position: absolute;
+    background: transparent url(../images/prev.png)
+}

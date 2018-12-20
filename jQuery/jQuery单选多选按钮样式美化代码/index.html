@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ch">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+		
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="css/multiselect.css"/>
+		
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/multiselect.js"></script>
+		
+    </head>
+    <body>
+        <h3>多选：</h3>
+        <div id="test"></div>
+        <span>结果：</span><input type="text" id="testValue"/>
+
+
+        <h3>单选：</h3>
+        <div id="test2"></div>
+        <span>结果：</span><input type="text" id="testValue2"/>
+
+
+        <h3>已选:</h3>
+        <div id="test3"></div>
+        <span>结果：</span><input type="text" id="testValue3"/>
+
+
+
+        <h3>关于选择类型（checkStyle）:</h3>
+        <div style="height: 25px"><b style="margin-right: 10px;"><span>yx(圆心):</span></b><span><i class="iconfont icon-xuanzhong"></i></span><span><i class="iconfont icon-weixuanzhong1"></i></span></div>
+        <div style="height: 25px"><b style="margin-right: 10px;"><span>yg(圆钩):</span></b><span><i class="iconfont icon-xuanzhong1"></i></span><span><i class="iconfont icon-weixuanzhong1"></i></span></div>
+        <div style="height: 25px"><b style="margin-right: 10px;"><span>fx(方心):</span></b><span><i class="iconfont icon-CombinedShapeCopy"></i></span><span><i class="iconfont icon-weixuanzhong"></i></span></div>
+        <div style="height: 25px"><b style="margin-right: 10px;"><span>fg(方钩):</span></b><span><i class="iconfont icon-xuanzhong3"></i></span><span><i class="iconfont icon-weixuanzhong"></i></span></div>
+<div style="text-align:center;">
+<p>更多源码：<a href="http://down.admin5.com/" target="_blank">A5源码</a></p>
+</div>   
+   </body>
+</html>
+<script type="text/javascript">
+    $("#test").multiselectInit({
+        "selectData":[{"colId":1,"colValue":"苹果"},{"colId":2,"colValue":"香蕉"},{"colId":3,"colValue":"菠萝"},{"colId":4,"colValue":"西瓜"},{"colId":5,"colValue":"甘蔗"}],
+        "isMulti":true,//是否多选
+        "inputId":"testValue",//输入框的id
+        "checkStyle":"fg"//选择的样式
+    });
+    $("#test2").multiselectInit({
+        "selectData":[{"colId":1,"colValue":"苹果"},{"colId":2,"colValue":"香蕉"},{"colId":3,"colValue":"菠萝"},{"colId":4,"colValue":"西瓜"},{"colId":5,"colValue":"甘蔗"}],
+        "isMulti":false,//是否多选
+        "inputId":"testValue2",//输入框的id
+        "checkStyle":"yx"//选择的样式
+    });
+    $("#test3").multiselectInit({
+        "selectData":[{"colId":1,"colValue":"苹果"},{"colId":2,"colValue":"香蕉"},{"colId":3,"colValue":"菠萝"},{"colId":4,"colValue":"西瓜"},{"colId":5,"colValue":"甘蔗"}],
+        "isSelectData":[{"colId":1,"colValue":"苹果"},{"colId":2,"colValue":"香蕉"},{"colId":3,"colValue":"菠萝"}],
+        "isMulti":true,//是否多选
+        "inputId":"testValue3",//输入框的id
+        "checkStyle":"fx"//选择的样式
+    });
+</script>

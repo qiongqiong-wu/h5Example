@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>气泡对话框</title>
+		<meta name="author" content="jQuery" />
+		<meta name="description" content="气泡对话框" />
+		<meta name="keywords" content="气泡对话框" />
+		<meta name="apple-mobile-web-app-title" content="气泡对话框" />
+		<!-- 适应移动端start -->
+		<!-- width viewport 宽度(数值/device-width)
+        height viewport 高度(数值/device-height)
+        initial-scale 初始缩放比例
+        maximum-scale 最大缩放比例
+        minimum-scale 最小缩放比例
+        user-scalable 是否允许用户缩放(yes/no)
+        minimal-ui iOS 7.1 beta 2 中新增属性，在页面加载时最小化上下状态栏
+     -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+		/>
+		<!-- 删除苹果默认的工具栏和菜单栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 设置苹果工具栏颜色 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+		<meta name="format-detection" content="telphone=no, email=no" />
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--	<meta http-equiv="X-Frame-Options" content="ALLOW-FROM URI">-->
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 适应移动端end -->
+		<!-- 浏览网站时的小图标 -->
+		<link href="images/app_logo.png" rel="shortcut icon" type="/image/x-icon" />
+		<!-- 添加至主屏时的图片 -->
+		<link href="images/app_logo.png" rel="apple-touch-icon-precomposed" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/currentColor.css" /> </head>
+
+	<body>
+		<div class="header">
+			<div class="navbar flexbox justifly">
+				<div class="nav_menu nav_left fl"></div>
+				<div class="nav_title tc">气泡对话框</div>
+				<div class="nav_menu nav_right fr hidden"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div id="code" class="part m20" style="width:100%;">
+				<h3>效果：</h3>
+				<div id="show" class="show p15 fw f12 lh200">
+					<a href="javascript:" id="btnScale" class="btn p10">点击我所有小图标2倍放大</a>
+					<div class="mt20"><strong>点线攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-list" style="transform: scale(1); margin: 0px;"></i>列表</a>
+					</p>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-repeat" style="transform: scale(1); margin: 0px;"></i>平铺</a>
+					</p>
+					<div class="mt20"><strong>矩形攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-open" style="transform: scale(1); margin: 0px;"><z></z></i>打开文件夹</a>
+					</p>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-copy" style="transform: scale(1); margin: 0px;"><z></z></i>复制该文件</a>
+					</p>
+					<div class="mt20"><strong>圆形攻略</strong></div>
+					<p class="mt10">注意事项
+						<a href="javascript:" class="ico ico-note ico-a" style="transform: scale(1); margin: 0px;"></a>
+					</p>
+					<div class="mt20"><strong>三角攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-download" style="transform: scale(1); margin: 0px;"><z></z></i>下载该文件</a>
+					</p>
+					<div class="mt20"><strong>旋转攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-share" style="transform: scale(1); margin: 0px;"><z></z></i>分享该文件</a>
+					</p>
+					<div class="mt20"><strong>拉伸攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-comment" style="transform: scale(1); margin: 0px;"><z></z></i>发表评论</a>
+					</p>
+					<div class="mt20"><strong>弧线攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a"><i class="ico ico-send" style="transform: scale(1); margin: 0px;"><z></z></i>发送该文件</a>
+					</p>
+					<div class="mt20"><strong>万能攻略</strong></div>
+					<p class="mt10">
+						<a href="javascript:" class="ico-a">更多操作<i class="ico ico-cordown" style="transform: scale(1); margin: 0px;"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/screenAdaptation.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/currentColor.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

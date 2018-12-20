@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>字体渐变随机验证码（原创）-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+p {
+	font-family:font-weight:bold;
+	letter-spacing:50px;
+	width:100%;
+	height:300px;
+	background:linear-gradient(to right,red,blue);
+	-webkit-background-clip:text;
+	color:transparent;
+	line-height:300px;
+	font-size:200px;
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<div>
+    <input type="text" id="input" value="">
+    <input type="button" id="code" value="点我切换验证码">
+    <input type="button" value="验证是否正确" class="Verification">
+    <p></p>
+</div>
+
+<script>
+$(function() {
+    var code; //alert(typeof code);
+    var onCode = $('#code'); // alert(bun_1.length);
+    var p = $('p'); // alert(p.length);
+    onCode.on('click', function() {
+        code = '';
+        var codeLength = 4;
+        var random = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        var Color = ['red', 'blue', 'yellow', 'pink', 'green', 'black'];
+        for (var i = 0; i < codeLength + 1; i++) {
+            var index = Math.floor(Math.random() * 36);
+            var ColorIndex = Math.floor(Math.random() * 6);
+            console.log(Color[ColorIndex]);
+            //                  p.css('border','1px '+Color[ColorIndex]+' solid');
+            p.css('border', '1px solid ' + Color[ColorIndex] + '');
+            code += random[index];
+        }
+        p.text(code);
+    })
+    var Verification = $('.Verification');
+    Verification.on('click', function() {
+        var ipt = $('#input').val().toUpperCase();
+        if (ipt.length == 0) {
+            alert('你是不是忘了啥？比如：验证码！');
+        } else if (ipt != p.text()) {
+            alert('你验证码输错了，重输！！！');
+            //                      alert(p.text());
+            //                      alert(ipt);
+        } else {
+            alert('真棒，验证成功');
+        }
+    })
+    onCode.click();
+})
+</script>
+
+</body>
+</html>

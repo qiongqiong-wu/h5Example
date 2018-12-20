@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>无标题文档</title>
+
+    <style type="text/css">
+        #banner {
+            position: relative;
+            width: 478px;
+            height: 286px;
+            border: 1px solid #666;
+            overflow: hidden;
+        }
+
+        #banner_list img {
+            border: 0px;
+        }
+
+
+        #banner .banner-spot {
+            position: absolute;
+            filter: Alpha(Opacity=80);
+            opacity: 0.8;
+            z-index: 1002;
+            margin: 0;
+            padding: 0;
+            bottom: 3px;
+            right: 5px;
+        }
+
+        #banner .banner-spot span {
+            border: 1px solid #f1f1f1;
+            width: 0.36rem;
+            height: 0.36rem;
+            border-radius: 50%;
+            margin-right: 0.1rem;
+            margin-top: 0.04rem;
+            display: block;
+            float: left;
+            background: #f1f1f1;
+        }
+
+        #banner .banner-spot span.on {
+            background: #ff0000;
+        }
+
+        #banner_list a {
+            position: absolute;
+        }
+
+        <!-- 让四张图片都可以重叠在一起-->
+    </style>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+
+
+    <script type="text/javascript">
+        var t = n = 0,
+            count;
+
+        $(document).ready(function () {
+
+            count = $("#banner_list a").length;
+
+            $("#banner_list a:not(:first-child)").hide();
+
+            $("#banner span").click(function () {
+                var i = $(this).index(); //获取Li元素内的值，即1，2，3，4
+
+                n = i;
+
+                if (i >= count) return;
+
+                $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(
+                    1000);
+
+                document.getElementById("banner").style.background = "";
+
+                $(this).toggleClass("on");
+
+                $(this).siblings().removeAttr("class");
+
+            });
+
+            t = setInterval("showAuto()", 4000);
+
+            $("#banner").hover(function () {
+                clearInterval(t)
+            }, function () {
+                t = setInterval("showAuto()", 4000);
+            });
+
+        })
+
+
+
+        function showAuto() {
+            n = n >= (count - 1) ? 0 : ++n;
+
+            $("#banner span").eq(n).trigger('click');
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div id="banner">
+        <div class="banner-spot">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="banner_list">
+
+            <a href="#" target="_blank">
+                <img src="imgs/p1.jpg" />
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="imgs/p2.jpg" />
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="imgs/p3.jpg" />
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="imgs/p1.jpg" />
+            </a>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

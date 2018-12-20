@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>css3绘制各种图形效果</title>
+		<style type="text/css">
+			.css-arrow-multicolor {
+				border-color: red green blue orange;
+				border-style: solid;
+				border-width: 60px;
+				width: 0;
+				height: 0;
+			}
+
+			.css-arrow-multicolor-dotted {
+				margin-top: -120px;
+				margin-left: 160px;
+				border-color: red green blue orange;
+				border-style: dotted;
+				border-width: 60px;
+				width: 0;
+				height: 0;
+			}
+
+			.css-arrow-acute {
+				margin-top: 20px;
+				border-color: red green blue orange;
+				border-style: solid;
+				border-width: 65px 50px 55px 80px;
+				width: 0;
+				height: 0;
+			}
+
+			.css-arrow-dotted {
+				margin-top: -120px;
+				margin-left: 160px;
+				border-color: red green blue orange;
+				border-style: dotted;
+				border-width: 65px 50px 55px 80px;
+				width: 0;
+				height: 0;
+			}
+
+			.square {
+				margin-top: 20px;
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+
+			.rectangle {
+				margin-top: -100px;
+				margin-left: 160px;
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+
+			.circle {
+				margin-top: 20px;
+				width: 100px;
+				height: 100px;
+				background: red;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+			}
+
+			.semicircle {
+				margin-top: -100px;
+				margin-left: 160px;
+				width: 100px;
+				height: 50px;
+				background: red;
+				-moz-border-radius: 100px 100px 0 0;
+				-webkit-border-radius: 100px 100px 0 0;
+				border-radius: 100px 100px 0 0;
+			}
+
+			.fanShaped {
+				margin-top: -40px;
+				margin-left: 320px;
+				background: none repeat scroll 0 0 red;
+				-webkit-border-radius: 50px 0 0 0;
+				-moz-border-radius: 50px 0 0 0;
+				border-radius: 50px 0 0 0;
+				height: 50px;
+				width: 50px;
+			}
+
+			.oval {
+				margin-top: 50px;
+				width: 200px;
+				height: 100px;
+				background: red;
+				-moz-border-radius: 50%;
+				-webkit-border-radius:  50%;
+				border-radius:  50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="css-arrow-multicolor"></div>
+		<div class="css-arrow-multicolor-dotted"></div>
+		<div class="css-arrow-acute"></div>
+		<div class="css-arrow-dotted"></div>
+		<div class="square">正方形</div>
+		<div class="rectangle">长方形</div>
+		<div class="circle">圆形</div>
+		<div class="semicircle">半圆形</div>
+		<div class="fanShaped">扇形</div>
+		<div class="oval">椭圆形</div>
+	</body>
+</html>

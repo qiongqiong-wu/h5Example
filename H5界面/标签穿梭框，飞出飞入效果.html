@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标签穿梭框，飞出飞入效果(原创)-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+html {
+	font-size:16px;
+}
+.fromlist {
+	padding:10px;
+	overflow:hidden;
+	background-color:seashell;
+	border:1px solid bisque;
+	transition:0.4s;
+	margin-top:20px;
+}
+.tolist {
+	padding:10px;
+	border:1px solid skyblue;
+	background-color:aliceblue;
+	margin-top:20px;
+}
+label {
+	padding:2px 5px;
+	background-color:darkgray;
+	color:#FFF;
+	margin-right:2px;
+	cursor:pointer;
+	border:solid 1px rgba(138,138,138,1.00);
+	border-radius:4px;
+	display:inline-block;
+	margin-bottom:2px;
+}
+.fromlist label {
+	background-color:tan;
+	border-color:rosybrown;
+}
+.tolist label {
+	background-color:dodgerblue;
+	border-color:royalblue;
+}
+.btns {
+	padding:10px;
+	overflow:hidden;
+	background-color:aliceblue;
+	border:1px solid lavender;
+}
+.btns button {
+	background-color:blueviolet;
+	color:#FFF;
+	border:0;
+	padding:5px 10px;
+	border-radius:4px;
+	font-size:18px;
+	box-shadow:0 0 2px 0 rgba(0,0,0,0.5);
+	outline:none;
+}
+.btns button:active {
+	box-shadow:0 0 5px 0 rgba(0,0,0,0.8);
+}
+</style>
+</head>
+<body>
+<div class="btns">
+    <button class="btnselectAll">全部选择</button> <button class="btnclearAll" style="background-color: darksalmon">清除已选</button>
+</div>
+
+<div class="fromlist" onselectstart="return false;">
+    <label sid="1">Hu</label>
+    <label sid="2">Jim</label>
+    <label sid="3">Lily</label>
+    <label sid="4">Liming</label>
+    <label sid="5">Sam</label>
+    <label sid="6">Xiaomin</label>
+    <label sid="7">Marry</label>
+    <label sid="8">Jelly</label>
+    <label sid="9">Bobo</label>
+    <label sid="10">Mr.L</label>
+    <label sid="11">Bill</label>
+    <label sid="12">May</label>
+    <label sid="13">Edison</label>
+    <label sid="14">Eason</label>
+    <label sid="15">W</label>
+    <label sid="16">Ab</label>
+    <label sid="17">Nic</label>
+    <label sid="18">Tom</label>
+    <label sid="19">JG</label>
+    <label sid="20">Obama</label>
+    <label sid="21">Vemo</label>
+    <label sid="22">Yiroon</label>
+    <label sid="23">Lisa</label>
+    <label sid="24">S.W</label>
+</div>
+<div class="tolist" onselectstart="return false;">
+</div>
+
+<script>
+$(function() {
+
+    var speed = 500;
+
+    function cloneto(obj, to) {
+        if (obj.is(':animated')) {
+            return false;
+        }
+        var clone = obj.clone();
+        clone.css({
+            opacity: 0
+        });
+        to.append(clone);
+
+        var scry = $(window).scrollTop();
+        var scrx = $(window).scrollLeft();
+        var tmpw = obj.outerWidth();
+        var tmph = obj.outerHeight();
+        var tmpx = obj.offset().left - scrx;
+        var tmpy = obj.offset().top - scry;
+
+        var newx = clone.offset().left - scrx;
+        var newy = clone.offset().top - scry;
+
+
+        var anier = obj.clone();
+        $('body').append(anier);
+
+
+        obj.fadeOut(function() {
+            $(this).remove();
+        });
+
+        anier.css({
+            position: "fixed",
+            left: tmpx + 'px',
+            top: tmpy + 'px'
+        }).stop(false, true).animate({
+            left: newx + 'px',
+            top: newy + 'px'
+        }, speed, function() {
+            $(this).remove();
+        });
+
+        setTimeout(function() {
+            clone.css({
+                opacity: 1
+            });
+        }, speed);
+
+    }
+
+    $('.btnselectAll').click(function() {
+        $('.fromlist label').each(function() {
+            cloneto($(this), $('.tolist'));
+        });
+    })
+    $('.btnclearAll').click(function() {
+        $('.tolist label').each(function() {
+            cloneto($(this), $('.fromlist'));
+        });
+    });
+
+    $('body').on('click', '.fromlist label', function() {
+        cloneto($(this), $('.tolist'));
+    })
+    $('body').on('click', '.tolist label', function() {
+        cloneto($(this), $('.fromlist'));
+    })
+})
+</script>
+
+</body>
+</html>

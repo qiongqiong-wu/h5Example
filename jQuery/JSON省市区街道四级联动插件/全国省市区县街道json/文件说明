@@ -1,0 +1,13 @@
+文件含义 						文件名称
+省份数据 						provinces.json
+城市数据 						cities.json
+区县数据 						areas.json
+乡镇（街道）数据 					streets.json
+“省份、城市” 二级联动数据 				pc.json
+“省份、城市” 二级联动数据（带编码） 			pc-code.json
+“省份、城市、区县” 三级联动数据 			pca.json
+“省份、城市、区县” 三级联动数据（带编码） 		pca-code.json
+“省份、城市、区县、乡镇” 四级联动数据 		pcas.json
+“省份、城市、区县、乡镇” 四级联动数据（带编码） 	pcas-code.json
+
+联动效果非常的好

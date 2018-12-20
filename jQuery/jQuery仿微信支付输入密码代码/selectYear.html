@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>添加银行卡</title>
+		<meta name="description" content="添加银行卡" />
+		<meta name="keywords" content="添加银行卡" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-mobile-web-app-title" content="添加银行卡" />
+		<script type="text/javascript">
+			function resize() {
+				var htmlEle = document.documentElement;
+				var htmlWidth = window.innerWidth;
+				htmlEle.style.fontSize = 100 * (htmlWidth / 750) + 'px'
+			}
+
+			resize();
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectYears.css" />
+
+	</head>
+
+	<body>
+		<div class="fl-shadow">
+			<div class="bg-shadow"></div>
+			<div class="shadow-box">
+				<div class="shadow-titlebar">
+					<div class="st title">
+						有效期
+					</div>
+					<div class="st cancel fl"></div>
+				</div>
+				<div class="shadow-content">
+					<ul class="ym">
+						<li class="year-banner active">年份
+							<ul class="select-year">
+							</ul>
+						</li>
+
+						<li class="month-banner">月份
+							<ul class="select-month" style="display: none;">
+							</ul>
+						</li>
+					</ul>
+					
+					<div class="ss">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectYear.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

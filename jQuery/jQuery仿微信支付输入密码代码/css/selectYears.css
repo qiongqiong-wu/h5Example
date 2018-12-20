@@ -1,0 +1,84 @@
+.fl-shadow {
+	display: block;
+}
+
+.shadow-content {
+	height: 8rem;
+}
+
+.shadow-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 0.4rem;
+	border-bottom: 1px solid #C6C6C6;
+}
+
+.shadow-content ul li {
+	position: relative;
+	float: left;
+	height: 0.4rem;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0.61px;
+	padding-left: 0.3rem;
+	font-family: PingFangSC-Regular;
+}
+
+
+.shadow-content ul li.active:after{
+	content: '';
+	position: absolute;
+	top: 0.4rem;
+	left: 0.25rem;
+	width: 0.7rem;
+	height: 0.02rem;
+	background: #FF0000;
+	transition: all .8s;
+}
+
+.shadow-content ul ul {
+	padding-top: 0.1rem;
+	border-bottom: none;
+}
+
+.shadow-content ul ul li {
+	float: none;
+	padding-left: 0;
+	width: 1.2rem;
+	position: relative;
+	top: 0.2rem;
+	left: 0;
+	padding-bottom: 0.345rem;
+}
+
+
+.shadow-content li li{
+	line-height: 0.3rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.25rem;
+	color: #646464;
+}
+
+.shadow-content li li.select {
+	background: url('../images/select.png') no-repeat right;
+	background-position: 0.7rem 0;
+	background-size: 0.260rem 0.26rem;
+	color: #F23030;
+}
+
+.shadow-content .select-month li.select {
+	background: url('../images/select.png') no-repeat right;
+	background-position: 0.5rem 0;
+	background-size: 0.260rem 0.26rem;
+	color: #F23030;
+}
+
+.ss{
+	position: absolute;
+	right: 0;
+	font-size: 0.32rem;
+	color: #646464;
+}
+

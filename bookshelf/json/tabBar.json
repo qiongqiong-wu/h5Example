@@ -1,0 +1,30 @@
+{
+	"tabBar": {
+		"color": "#a9b7b7",
+		"selectedColor": "#ff0000",
+		"borderStyle": "white",
+		"list": [{
+			"selectedIconPath": "images/icon_bookshelf_selected.png",
+			"iconPath": "images/icon_bookshelf_select.png",
+			"pagePath": "index.html",
+			"txt": "书架"
+		}, {
+			"selectedIconPath": "images/icon_ranking_selected.png",
+			"iconPath": "images/icon_ranking_select.png",
+			"pagePath": "https://618.tmall.com",
+			"txt": "排行榜"
+		}, {
+			"selectedIconPath": "images/icon_search_selected.png",
+			"iconPath": "images/icon_search_select.png",
+			"pagePath": "https://www.taobao.com/",
+			"txt": "发现"
+		}, {
+			"selectedIconPath": "images/icon_more_selected.png",
+			"iconPath": "images/icon_more_select.png",
+			"pagePath": "https://www.taobao.com/",
+			"txt": "更多"
+		}]
+	}
+}
+  
+  

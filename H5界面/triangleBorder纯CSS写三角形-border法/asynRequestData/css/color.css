@@ -1,0 +1,852 @@
+@charset "utf-8";
+/*粟色128,0,0*/
+
+.maroon {
+    color: #800000;
+}
+
+/*暗红色139,0,0*/
+
+.darkred {
+    color: #8B0000;
+}
+
+/*褐色165,42,42*/
+
+.brown {
+    color: #A52A2A;
+}
+
+/*火砖色178,34,34*/
+
+.firebrick {
+    color: #B22222;
+}
+
+/*暗深红色 猩红 220,20,60*/
+
+.crimson {
+    color: #DC143C;
+}
+
+/*红色255,0,0*/
+
+.red {
+    color: #FF0000;
+}
+
+/**************************桃紅~紛紅******************************/
+/*中紫罗兰色199,21,133*/
+
+.mediumvioletred {
+    color: #C71585;
+}
+
+/*苍白的紫罗兰色219,112,147*/
+
+.palevioletred {
+    color: #DB7093;
+}
+
+/*深粉红色255,20,147*/
+
+.deeppink {
+    color: #FF1493;
+}
+
+/*紫红色 红紫色255,0,255*/
+
+.fuchsia,
+.magenta {
+    color: #FF00FF;
+}
+
+/*热情的粉红色255,105,180*/
+
+.hotpink {
+    color: #FF69B4;
+}
+
+/*粉红色*255,192,203*/
+
+.pink {
+    color: #FFC0CB;
+}
+
+/*亮粉红色255,182,193*/
+
+.lightpink {
+    color: #FFB6C1;
+}
+
+/*淡紫红255,240,245*/
+
+.lavenderblush {
+    color: #FFF0F5;
+}
+
+/*浅玫瑰色255,228,225*/
+
+.mistyrose {
+    color: #FFE4E1;
+}
+
+/************************************紫**********************/
+/*靛青色75,0,130*/
+
+.indigo {
+    color: #4B0082;
+}
+
+/*紫色128,0,128*/
+
+/*暗洋红 139,0,139*/
+
+.darkmagenta {
+    color: #8B008B;
+}
+
+.purple {
+    color: #800080;
+}
+
+/*暗紫色153,50,204*/
+
+.darkorchid {
+    color: #9932CC;
+}
+
+/*紫罗兰蓝色138,43,226*/
+
+.blueviolet {
+    color: #8A2BE2;
+}
+
+/*暗紫罗兰色148,0,211*/
+
+.darkviolet {
+    color: #9400D3;
+}
+
+/*石蓝色 板蓝106,90,205*/
+
+.slateblue {
+    color: #6A5ACD;
+}
+
+/*中紫色147,112,219*/
+
+.mediumpurple {
+    color: #9370DB;
+}
+
+/*中暗蓝色123,104,238*/
+
+.mediumslateblue {
+    color: #7B68EE;
+}
+
+/*中粉紫色186,85,211*/
+
+.mediumorchid {
+    color: #BA55D3;
+}
+
+/*淡紫色  兰花的紫色218,112,214*/
+
+.orchid {
+    color: #DA70D6;
+}
+
+/*紫罗兰色238,130,238*/
+
+.violet {
+    color: #EE82EE;
+}
+
+/*洋李色221,160,221*/
+
+.plum {
+    color: #DDA0DD;
+}
+
+/*蓟色216,191,216*/
+
+.thistle {
+    color: #D8BFD8;
+}
+
+/*淡紫色230,230,250*/
+
+.lavender {
+    color: #E6E6FA;
+}
+
+/********************************褐~橘~米白********************/
+/*重褐色139,69,19*/
+
+.saddlebrown {
+    color: #8B4513;
+}
+
+/*赭色160,82,45*/
+
+.sienna {
+    color: #A0522D;
+}
+
+/*巧可力色210,105,30*/
+
+.chocolate {
+    color: #D2691E;
+}
+
+/*印第安红205,92,92*/
+
+.indianred {
+    color: #CD5C5C;
+}
+
+/*褐玫瑰红188,143,143*/
+
+.rosybrown {
+    color: #BC8F8F;
+}
+
+/*亮珊瑚色240,128,128*/
+
+.lightcoral {
+    color: #F08080;
+}
+
+/*暗肉色233,150,122*/
+
+.darksalmon {
+    color: #E9967A;
+}
+
+/*鲜肉色250,128,114*/
+
+.salmon {
+    color: #FA8072;
+}
+
+/*亮肉色255,160,122*/
+
+.lightsalmon {
+    color: #FFA07A;
+}
+
+/*红橙色255,69,0*/
+
+.orangered {
+    color: #FF4500;
+}
+
+/*西红柿色255,99,71*/
+
+.tomato {
+    color: #FF6347;
+}
+
+/*橙色255,165,0*/
+
+.orange {
+    color: #FFA500;
+}
+
+/*珊瑚色255,127,80*/
+
+.coral {
+    color: #FF7F50;
+}
+
+/*暗桔黄色255,140,0*/
+
+.darkorange {
+    color: #FF8C00;
+}
+
+/*沙褐色244,164,96*/
+
+.sandybrown {
+    color: #F4A460;
+}
+
+/*秘鲁色205,133,63*/
+
+.peru {
+    color: #CD853F;
+}
+
+/*茶色210,180,140*/
+
+.tan {
+    color: #D2B48C;
+}
+
+/*实木色222,184,135*/
+
+.burlywood {
+    color: #DEB887;
+}
+
+/*浅黄色 小麦色245,222,179*/
+
+.wheat {
+    color: #F5DEB3;
+}
+
+/*鹿皮色255,228,181*/
+
+.moccasin {
+    color: #FFE4B5;
+}
+
+/*纳瓦白255,222,173*/
+
+.navajowhite {
+    color: #FFDEAD;
+}
+
+/*桃色255,218,185*/
+
+.peachpuff {
+    color: #FFDAB9;
+}
+
+/*桔黄色255,228,196*/
+
+.bisque {
+    color: #FFE4C4;
+}
+
+/*古董白250,235,215*/
+
+.antiquewhite {
+    color: #FAEBD7;
+}
+
+/*番木色255,239,213*/
+
+.papayawhip {
+    color: #FFEFD5;
+}
+
+/*米绸色 玉米色255,248,220*/
+
+.cornsilk {
+    color: #FFF8DC;
+}
+
+/*老花色253,245,230*/
+
+.oldlace {
+    color: #FDF5E6;
+}
+
+/*亚麻色250,240,230*/
+
+.linen {
+    color: #FAF0E6;
+}
+
+/*海贝色255,245,238*/
+
+.seashell {
+    color: #FFF5EE;
+}
+
+/*雪白色255,250,250*/
+
+.snow {
+    color: #FFFAFA;
+}
+
+/*花白色255,250,240*/
+
+.floralwhite {
+    color: #FFFAF0;
+}
+
+/*象牙色255,255,240*/
+
+.ivory {
+    color: #FFFFF0;
+}
+
+/*薄荷色0,255,127*/
+
+.mintcream {
+    color: #00FF7F;
+}
+
+/************************************金~黃**************/
+/*暗金黄色*/
+
+.darkgoldenrod {
+    color: #B8860B;
+}
+
+/*金麒麟色218,165,32*/
+
+.goldenrod {
+    color: #DAA520;
+}
+
+/*金色255,215,0*/
+
+.gold {
+    color: #FFD700;
+}
+
+/*黄色255,255,0*/
+
+.yellow {
+    color: #FFFF00;
+}
+
+/*暗黄褐色189,183,107*/
+
+.darkkhaki {
+    color: #BDB76B;
+}
+
+/*黄褐色240,230,140*/
+
+.khaki {
+    color: #F0E68C;
+}
+
+/*苍麒麟色238,232,170*/
+
+.palegoldenrod {
+    color: #EEE8AA;
+}
+
+/*柠檬绸色255,250,205*/
+
+.lemonchiffon {
+    color: #FFFACD;
+}
+
+/*亮金黄色*250,250,210/
+
+.lightgoldenrodyellow {
+    color: #FAFAD2;
+}
+/*亮黄色255,255,224*/
+
+.lightyellow {
+    color: #FFFFE0;
+}
+
+/**************************************~黃綠***********************/
+/*暗瓦灰色*/
+
+.darkslategrey {
+    color: #2F4F4F;
+}
+
+/*暗橄榄绿 85,107,47*/
+
+.darkolivegreen,
+.olivedrab {
+    color: #556B2F;
+}
+
+/*深绿褐色，米色，浅褐色107,142,35*/
+
+.beige {
+    color: #6B8E23;
+}
+
+/*橄榄色128,128,0*/
+
+.olive {
+    color: #808000;
+}
+
+/*暗绿色0,100,0*/
+
+.darkgreen {
+    color: #006400;
+}
+
+/*森林绿34,139,34*/
+
+.forestgreen {
+    color: #228B22;
+}
+
+/*海绿色46,139,87*/
+
+.seagreen {
+    color: #2E8B57;
+}
+
+/*绿色 水鸭色0,128,0*/
+
+.green,
+.teal {
+    color: #008080;
+}
+
+/*亮海蓝色 浅海洋绿32,178,170*/
+
+.lightseagreen {
+    color: #20B2AA;
+}
+
+/*中绿色*/
+
+.mediumaquamarine {
+    color: #66CDAA;
+}
+
+/*暗海兰色143,188,143*/
+
+.darkseagreen {
+    color: #8FBC8F;
+}
+
+/*黄绿色*/
+
+.yellowgreen {
+    color: #9ACD32;
+}
+
+/*橙绿色50,205,50*/
+
+.limegreen {
+    color: #32CD32;
+}
+
+/*酸橙色0,255,0*/
+
+.lime {
+    color: #00FF00;
+}
+
+/*黄绿色127,255,0*/
+
+.chartreuse {
+    color: #7FFF00;
+}
+
+/*草绿色124,252,0*/
+
+.lawngreen {
+    color: #7CFC00;
+}
+
+/*黄绿色173,255,47*/
+
+.greenyellow {
+    color: #ADFF2F;
+}
+
+/*中亮绿色245,255,250   00FA9A*/
+
+.mediumspringgreen {
+    color: #F5FFFA;
+}
+
+/*春绿色 中海蓝60,179,113*/
+
+.springgreen,
+.mediumseagreen {
+    color: #3CB371;
+}
+
+/*亮绿色144,238,144*/
+
+.lightgreen {
+    color: #90EE90;
+}
+
+/*苍绿色152,251,152*/
+
+.palegreen {
+    color: #98FB98;
+}
+
+/*碧绿色*/
+
+.aquamarine {
+    color: #7FFFD4;
+}
+
+/*蜜色240,255,0*/
+
+.honeydew {
+    color: #F0FFF0;
+}
+
+/****************************************藍*************************/
+
+/*中灰兰色25,25,112*/
+
+.midnightblue {
+    color: #191970;
+}
+
+/*海军色0,0,128*/
+
+.navy {
+    color: #000080;
+}
+
+/*暗蓝色0,0,139*/
+
+.darkblue {
+    color: #00008B;
+}
+
+/*中兰色0,0,205*/
+
+.mediumblue {
+    color: #0000CD;
+}
+
+/*纯蓝色0,0,255*/
+
+.blue {
+    color: #0000FF;
+}
+
+/*天蓝色 深蓝色*/
+
+.depthblue {
+    color: #91B8D9;
+}
+
+/*暗灰蓝色72,61,139*/
+
+.darkslateblue {
+    color: #483D8B;
+}
+
+/*皇家蓝 宝蓝65,105,225*/
+
+.royalblue {
+    color: #4169E1;
+}
+
+/*闪兰色 道奇蓝道奇蓝*/
+
+.dodgerblue {
+    color: #1E90FF;
+}
+
+/*菊兰色100,149,237*/
+
+.cornflowerblue {
+    color: #6495ED;
+}
+
+/*深天蓝色0,191,255*/
+
+.deepskyblue {
+    color: #00BFFF;
+}
+
+/*亮天蓝色  淡蓝色135,206,250*/
+
+.lightskyblue {
+    color: #87CEFA;
+}
+
+/*亮钢兰色176,196,222*/
+
+.lightsteelblue {
+    color: #B0C4DE;
+}
+
+/*亮蓝色 淡蓝173,216,230*/
+
+.lightblue {
+    color: #ADD8E6;
+}
+
+/*钢兰色70,130,180*/
+
+.steelblue {
+    color: #4682B4;
+}
+
+/*暗青色*/
+
+.darkcyan {
+    color: #008B8B;
+}
+
+/*军兰色95,158,160*/
+
+.cadetblue {
+    color: #5F9EA0;
+}
+
+/*暗宝石绿 粉蓝*/
+
+.darkturquoise  {
+    color: #00CED1;
+}
+
+/*中绿宝石*/
+
+.mediumturquoise {
+    color: #48D1CC;
+}
+
+/*浅绿色 青色0,255,255*/
+
+.aqua,
+.cyan {
+    color: #00FFFF;
+}
+
+/*青绿色 绿宝石64,224,208*/
+
+.turquoise {
+    color: #40E0D0;
+}
+
+/*绿玉127,255,170*/
+
+.babygreen {
+    color: #7FFFAA;
+}
+
+/*浅蓝色 天蓝色135,206,235*/
+
+.skyblue {
+    color: #87CEEB;
+}
+
+/*粉蓝色 火药蓝176,224,230*/
+
+.powderblue {
+    color: #B0E0E6;
+}
+
+/*苍宝石绿175,238,238*/
+
+.paleturquoise {
+    color: #AFEEEE;
+}
+
+/*亮青色 淡青色225,255,255*/
+
+.lightcyan {
+    color: #E0FFFF;
+}
+
+/*天蓝色 蔚蓝色240,255,255*/
+
+.azure {
+    color: #F0FFFF;
+}
+
+/*爱丽丝蓝240,248,255*/
+
+.aliceblue {
+    color: #F0F8FF;
+}
+
+/***********************************黑~灰~白**************************/
+/*纯黑色0,0,0*/
+
+.black {
+    color: #000000;
+}
+
+/*暗灰色105,105,105*/
+
+.dimgray {
+    color: #696969;
+}
+
+/*灰色*/
+
+.grey {
+    color: #7F7F7F;
+}
+
+/*灰白色128,128,128*/
+
+.gray {
+    color: #808080;
+}
+
+/*灰石色112,128,144*/
+
+.slategray {
+    color: #708090;
+}
+
+/*亮蓝灰 浅石板灰119,136,153*/
+
+.lightslategrey {
+    color: #778899;
+}
+
+/*暗灰色169,169,169*/
+
+.darkgrey {
+    color: #A9A9A9;
+}
+
+/*银色192,192,192*/
+
+.silver {
+    color: #C0C0C0;
+}
+
+/*亮灰色211,211,211*/
+
+.lightgray {
+    color: #D3D3D3;
+}
+
+/*米色*/
+
+.buff {
+    color: #F5F5DC;
+}
+
+/*淡灰色220,220,220*/
+
+.gainsboro {
+    color: #DCDCDC;
+}
+
+/*浅灰色*/
+
+.shallowgrey {
+    color: #F2F2F2;
+}
+
+/*烟白色*245,245,245/
+
+.whitesmoke {
+    color: #F5F5F5;
+}
+
+/*幽灵白248,248,255*/
+
+.ghostwhite {
+    color: #F8F8FF;
+}
+
+/*白色255,255,255*/
+
+.white {
+    color: #FFFFFFFF;
+}
+
+/*白杏色255,235,205*/
+
+.blanchedalmond {
+    color: #FFEBCD;
+}

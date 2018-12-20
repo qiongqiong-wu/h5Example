@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<style>
+	* { padding:0; margin:0; }/*好孩子别用这个*/
+	html { height:100%; }
+	body { height:100%; }
+	img { border:0; }
+	div.wrap { width:100%; margin:0 auto; overflow:hidden; position:relative; background:#DDD; }
+	div.wrap div { width:220px; padding:4px; border:1px solid #000; float:left; }
+	div.wrap div h3 { line-height:35px; }
+	div.wrap div img { width:220px; }
+	div.wrap div p { padding:5px; line-height:20px; }
+	div.wrap div span { color:#F00; }
+	</style>
+	<script>
+	window.onload = function() {
+		waterFall("wrap")
+	}//尽量避免使用Jquery的ready，safari出现问题很头痛
+	window.onresize = function() {
+		waterFall("wrap")
+	}
+	function waterFall(element,space,children) {
+		if(!element) return ;
+		space = space || 20 ;
+		children = children || "div" ;	//前三行默认设置，分别为外框元素id，上下留白，子元素标签名(子元素标签名使用太多或出错)
+		var wrap = document.getElementById(element) ;
+		var water = wrap.getElementsByTagName(children) ;
+		var spaceWidth = water[0].offsetWidth ;	//获取子元素宽度(offsetWidth会获取块级元素的padding和border)
+		var wrapWidth = wrap.offsetWidth ;	//获取外框元素宽度
+		var colNum = Math.floor(wrapWidth/spaceWidth) ;	//计算获取外框元素所能承受列数
+		var padding = Math.floor((wrapWidth - colNum*spaceWidth)/(colNum+1)) ;	//计算外框元素剩余宽度并计算左右留白
+		var column = new Array() ;
+		var length = water.length ;
+		var maxHeight = 0 ;
+		for(var i=0;i<colNum;i++) {	//初始化数组来计算各列初始top值和left值
+			column[i] = new Array() ;
+			column[i].top = space ;
+			column[i].left = (spaceWidth * i)+padding*(i+1) ;	//计算各列距离左侧距离
+		}
+		for(var i=0;i<length;i++) {	//遍历所有子元素及瀑布流布局
+			var index = i+1 ;	//计算该子元素属于第几列
+			if(index%colNum==0) {
+				sub = colNum ;
+			} else {
+				sub = index%colNum ;
+			}
+			_this = water ;
+			_this[i].style.position = "absolute" ;
+			_this[i].style.top = column[sub-1].top + "px" ;
+			_this[i].style.left = column[sub-1].left + "px" ;
+			column[sub-1].top += _this[i].offsetHeight + space ;	//计算各列最新高度以便赋值
+		}
+		for(var i=0;i<colNum;i++) {	//获取瀑布流整体布局高度
+			if(column[i].top > maxHeight) maxHeight = column[i].top ;
+		}
+		wrap.style.height = maxHeight+"px" ;	//给外框元素赋值以防止出现子元素溢出外框元素
+	}
+	//希望能帮助到大家哈，我一开始使用的事Jquery，但是考虑瀑布流比较消耗浏览器内存，就改成原生javascript了，滚动到浏览器底部ajax取值做瀑布流也灭做，等到项目到了再说吧
+	</script>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="01.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="02.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="03.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="04.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="05.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="06.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="07.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流瀑布流</span>
+		</div>		
+		<div>
+			<h3>瀑布流</h3>
+			<a href="javascript:void(0)" title=""><img src="08.jpg" alt="" title="" /></a>
+			<p>瀑布流瀑布流瀑布流瀑布流</p>
+			<span>瀑布流瀑布流瀑布流</span>
+		</div>
+	</div>
+</body>
+</html>

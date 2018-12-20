@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>表格</title>
+		<!-- 说明 -->
+		<meta name="description" content="表格" />
+		<!-- 关键字 -->
+		<meta name="keywords" content="表格" />
+		<!-- 设置文档宽度、是否缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"
+		/>
+
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-mobile-web-app-title" content="表格" />
+		<title>表格</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = "orientationchange" in window ? "orientationchange" :
+					"resize",
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) {
+							return
+						}
+						if(clientWidth >= 750) {
+							docEl.style.fontSize = "100px"
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 750) + "px"
+						}
+					};
+				if(!doc.addEventListener) {
+					return
+				}
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener("DOMContentLoaded", recalc, false)
+			})(document, window);
+		</script>
+
+		<style type="text/css">
+			.loan-order {
+				padding: 0.1rem;
+			}
+
+			.unit {
+				float: right;
+				font-size: .16rem;
+				border-bottom: 1px solid #000;
+			}
+
+			.enclosure {
+				display: inline-block;
+				padding-top: 0.05rem;
+				font-weight: bold;
+				border-bottom: 1px solid #000;
+				font-size: 0.32rem;
+			}
+
+			.loan-order-form {
+				position: absolute;
+				padding: 0;
+				top: 2rem;
+				left: 0.1rem;
+				right: 0.1rem;
+				border: 1px solid #000;
+			}
+
+			.loan-order-form .loan,
+			.service {
+				border-bottom: 1px solid #000;
+				display: flex;
+				font-size: 0.28rem;
+				padding: 0.2rem;
+			}
+
+			.loan-order-form .loan-left {
+				flex: 1;
+			}
+
+			.loan-order-form .loan-right {
+				flex: 1;
+			}
+
+			ul {
+				display: flex;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				border-bottom: 1px solid #000;
+			}
+
+			li {
+				flex: 1;
+				padding: 0.3rem 0.05rem;
+				border-right: 1px solid #000;
+				font-size: 0.20rem;
+				text-decoration: underline;
+				vertical-align: middle;
+				text-align: center;
+
+			}
+
+			li:last-child {
+				border-right: none;
+			}
+
+			ul:last-child {
+				border-bottom: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="log-title">
+				表格
+			</div>
+			<div class="left" style="visibility: hidden;"></div>
+			<div class="right" style="visibility: hidden;"></div>
+		</div>
+		</div>
+
+		<div class="content">
+			<div class="loan-order">
+				<div class="loan-order-title">
+					<div class="enclosure">
+						附件：借款订单
+					</div>
+					<br />
+					<div class="unit">
+						单位（人民币：元）
+					</div>
+				</div>
+				<br />
+				<div class="loan-order-form">
+					<div class="loan">
+						<div class="loan-left loan-amount">借款金额：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元;</div>
+						<div class="loan-right loan-period">借款期数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期</div>
+					</div>
+					<div class="service">
+						<div class="loan-left service-charge">手续费总额：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元;</div>
+						<div class="loan-right financing-cos">综合资金成本年化：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%</div>
+					</div>
+					<div class="table-current-period">
+						<div class="table-caption">
+							<ul>
+								<li>当期应还款项</li>
+								<li>当期应还本金</li>
+								<li>当期应还利息</li>
+								<li>当期应付手续费</li>
+								<li>应还款日</li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js" charset="utf-8"></script>
+		<script src="js/public.js" charset="utf-8"></script>
+
+	</body>
+
+</html>

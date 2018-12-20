@@ -1,0 +1,1 @@
+$(function(){$('div#prev, div#next').RSC();});

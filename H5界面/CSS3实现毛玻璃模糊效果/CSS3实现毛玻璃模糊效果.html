@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3实现毛玻璃模糊效果 - 轩枫阁</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.blur {
+				-webkit-filter: blur(10px);
+				/* Chrome, Opera */
+				-moz-filter: blur(10px);
+				-ms-filter: blur(10px);
+				filter: blur(10px);
+			}
+
+			.bac {
+				width: 300px;
+				height: auto;
+				position: absolute;
+				top: 0;
+				left: 5%;
+			}
+
+			.circle {
+				position: relative;
+				width: 100px;
+				margin: 200px auto;
+				border: solid 2px #FFF;
+				z-index: 888;
+			}
+
+			.circle img {
+				width: 100%;
+			}
+
+			.demo img {
+				width: 500px;
+				height: auto;
+			}
+
+			.gray {
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				filter: grayscale(100%);
+
+				filter: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle"><img src="blur.jpg" /></div>
+		<img class="bac" src="blur.jpg" />
+		<img class="bac blur" src="blur.jpg" />
+
+
+		<div class="demo">
+			<img src="blur.jpg">
+			<img src="blur.jpg" class="gray">
+		</div>
+	</body>
+</html>

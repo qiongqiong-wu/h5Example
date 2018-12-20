@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- 字体编码 -->
+		<meta charset="utf-8" />
+		<title> 图片上传 </title>
+		<!-- 说明 -->
+		<meta content="图片上传" name="description" />
+		<!-- 关键字 -->
+		<meta content="图片上传" name="keywords" />
+		<!-- 设置文档宽度、是否缩放.强制让文档与设备的宽度保持1：1 -->
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"
+		 name="viewport" />
+		<!-- UC强制全屏 -->
+		<meta content="yes" name="full-screen" />
+		<!-- QQ强制全屏 -->
+		<meta content="true" name="x5-fullscreen" />
+		<!-- UC应用模式 -->
+		<meta content="application" name="browsermode" />
+		<!-- QQ应用模式 -->
+		<meta content="app" name="x5-page-mode" />
+		<!-- 禁止了把数字转化为拨号链接 -->
+		<meta content="telephone=no" name="format-detection" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<!-- 浏览网站时的小图标 -->
+		<link href="images/app_logo.png" rel="shortcut icon" type="/image/x-icon" />
+		<!-- 添加至主屏时的图片 -->
+		<link href="images/app_logo.png" rel="apple-touch-icon-precomposed" />
+		<meta content="图片上传" name="apple-mobile-web-app-title" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/camera.css" /> </head>
+
+	<body>
+		<div class="warp">
+			<div class="toast"> <span class="toast_text"></span> </div>
+			<div class="header">
+				<div class="navbar flexbox justifly">
+					<div class="nav_menu nav_left fl"></div>
+					<div class="nav_title tc ">图片上传</div>
+					<div class="nav_menu nav_right fr"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="img-box full">
+					<section class="img-section">
+						<p class="up-p">作品图片：<span class="up-span">最多可以上传5张图片，马上上传</span></p>
+						<div class="z_photo upimg-div clear">
+							<section class="z_file fl"> <img src="images/a11.png" class="add-img"> <input type="file" name="file"
+								 id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp"
+								 multiple /> </section>
+						</div>
+					</section>
+				</div>
+				<aside class="mask works-mask">
+					<div class="mask-content">
+						<p class="del-p ">您确定要删除作品图片吗？</p>
+						<p class="check-p"><span class="del-com wsdel-ok">确定</span><span class="wsdel-no">取消</span></p>
+					</div>
+				</aside>
+			</div>
+			<div class="fl-shadow hidden">
+				<div class="bg-shadow"></div>
+				<div class="shadow-box">
+					<div class="shadow-titlebar">
+						<div class="st title"> 选择图片 </div>
+						<div class="st cancel fl" style="display: none;"></div>
+					</div>
+					<div class="shadow-content">
+						<ul class="select-pic">
+							<li class="select-camera"> 选择相机 </li>
+							<li class="select-ablum"> 选择相册 </li>
+						</ul>
+					</div>
+					<div class="shadow-footer"> 取消 </div>
+				</div>
+			</div>
+			<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/screenAdaptation.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/camera.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

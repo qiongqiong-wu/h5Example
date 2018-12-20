@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>JS触屏滑动选项卡标签切换代码 - A5源码</title>
+
+<link rel="stylesheet" href="js/swiper/swiper.min.css" />
+
+<style type="text/css">
+	*{margin:0;padding:0;font-family: "微软雅黑";}
+		.wrap{margin:0 auto;}
+		.tabs{height:32px;background: #5AA9F3;width: 100%;padding-top: 8px;text-align: center}
+		.tabs .part{display:block;float:left;width:33%;color:#fff;text-align:center;height: 20px;}
+		.tabs .part:first-child{border-right: 1px solid #ADDAFD;}
+		.tabs a{width:70px;display:block;color:#fff;text-align:center;margin:0 auto;font-size:16px;text-decoration:none;padding-bottom: 2px;}
+		.tabs span.active a{color:#fff;border-bottom: 2px solid #fff;}
+		.swiper-container{width:100%;border-top:0;margin-top:10px!important}
+		.swiper-slide{width:100%;background:none;color:#373737;}
+		p{text-align: center;}
+</style>
+
+</head>
+
+<body class="bgc_gray">
+
+<div class="pg-main">
+
+	<div id="wrapper">
+		<!--header end-->
+		<div class="wrap">
+			<div class="tabs">
+				<span class="part active"><a href="#" hidefocus="true" >全免费</a></span>
+				<span class="part" style="border-right: 1px solid #ADDAFD"><a href="#" hidefocus="true">优惠券</a></span>
+				<span class="part"><a href="#" hidefocus="true">个人免费</a></span>
+			</div>
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
+						<div class="content-slide">
+							<p>当泪干血隐狂涌白雪纷飞都成空</p>
+							<div></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="content-slide">
+						<p>已经消失在风雨里</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<p>一场雨把我困在这里</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/swiper/idangerous.swiper.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+var tabsSwiper;
+tabsSwiper = new Swiper('.swiper-container', {
+	speed : 500,
+	onSlideChangeStart : function() {
+		$(".tabs .active").removeClass('active');
+		$(".tabs span").eq(tabsSwiper.activeIndex).addClass('active');
+	}
+});
+
+$(".tabs span").on('touchstart mousedown', function(e) {
+	e.preventDefault()
+	$(".tabs .active").removeClass('active');
+	$(this).addClass('active');
+	tabsSwiper.swipeTo($(this).index());
+
+});
+
+$(".tabs span").click(function(e) {
+	e.preventDefault();
+});
+
+
+});//end
+</script>
+
+<div style="text-align:center;margin:150px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://down.admin5.com/" target="_blank">A5源码</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多行文本溢出省略-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<div id="goodIntroduction">
+    《从你的全世界路过》是作者张嘉佳以自己在微博上所讲的33个真实的爱情
+    故事而总结编著成的爱情小说。《从你的全世界路过》最初以“睡前故事”系
+    列的名义在网上疯狂流传，几天内达到1,500,000 次转发，超4亿次阅读
+    ，引来电影投资方的巨资抢购，转瞬便签下其中5个故事的电影版权。每1分钟
+    ，都有人在张嘉佳的故事里看到自己。 《从你的全世界路过》就像朋友在深夜跟你在叙述
+    ，叙述他走过的千山万水。当你辗转失眠时，当你需要安慰时，当你等待列车时
+    ，当你赖床慵懒时，当你饭后困顿时 ，应该都能找到一章合适的。
+    这算是一本睡前读物。采用讲故事的形式来讲述一个个平凡却引人深思的故事
+    ，它与那些纯粹的鸡汤文不同，故事的切合和说理更让人从心理上认同
+    ，因为书中的每一段故事似乎都发生在每一位读者身边。
+</div>
+
+<script>
+var str = $("#goodIntroduction").text();
+var tempt = str;
+coverup();
+
+function coverup() {
+    if (str.length > 120) {
+        $("#goodIntroduction").text(tempt.slice(0, 120) + "...");
+    }
+    var readmore = "<a onclick='showmore()'  style='color: orange;'>查看更多↓</a>"
+    $("#goodIntroduction").append(readmore);
+}
+
+function showmore() {
+    $("#goodIntroduction").text(str);
+    var readmore = "<a onclick='coverup()'  style='color: orange;'>收起↑</a>"
+    $("#goodIntroduction").append(readmore);
+}
+</script>
+
+</body>
+</html>

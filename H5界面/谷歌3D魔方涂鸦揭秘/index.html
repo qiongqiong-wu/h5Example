@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/cube.css">
+    <link rel="stylesheet" type="text/css" href="styles/doodle.css">
+    <link rel="stylesheet" type="text/css" href="styles/certificate.css">
+    <!-- Script font -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Rubik+One&subset=all" rel="stylesheet" type="text/css"> -->
+    <!-- compiled & minified cube code -->
+    <script charset="utf-8" src="scripts/tween.js"></script>
+    <script charset="utf-8" src="scripts/Three.noStrict.js"></script>
+    <script charset="utf-8" src="scripts/cuber.min.js"></script>
+  </head>
+  <body>
+
+
+
+<div style="bottom: 8px; height: 36px; position: absolute; width: 100%;"><div style="height: 36px; position: relative; text-align: right; margin: 0px auto; opacity: 1; width: 572px; -webkit-transition: opacity 250ms; transition: opacity 250ms;"><div style="position: absolute; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); bottom: 6px; color: rgb(221, 221, 221); cursor: default; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16pt; line-height: normal; font-family: arial, sans-serif; left: 0px;">1</div><div style="position: relative; opacity: 0; -webkit-transition: opacity 250ms; transition: opacity 250ms; display: inline-block;"><input id="hplogosl" readonly="" style="background-color: rgb(221, 221, 221); border: none; color: rgb(255, 255, 255); font-weight: bold; height: 32px; margin: 0px; outline: none; padding: 0px 10px; vertical-align: top; width: 125px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-position: initial initial; background-repeat: initial initial;"><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; cursor: pointer; display: inline-block; margin: 0px 0px 4px 4px; background-position: 0px -354px; background-repeat: no-repeat no-repeat;"></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; cursor: pointer; display: inline-block; margin: 0px 0px 4px 4px; background-position: 0px -236px; background-repeat: no-repeat no-repeat;"></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; cursor: pointer; display: inline-block; margin: 0px 0px 4px 4px; background-position: 0px -388px; background-repeat: no-repeat no-repeat;"></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; display: inline-block; cursor: pointer; margin: 0px 0px 4px 4px; background-position: 0px -270px; background-repeat: no-repeat no-repeat;"></div></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; display: inline-block; cursor: pointer; margin: 0px 0px 4px 4px; background-position: 0px -134px; background-repeat: no-repeat no-repeat;"></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; display: inline-block; cursor: pointer; margin: 0px 0px 4px 4px; background-position: 0px -168px; background-repeat: no-repeat no-repeat;"></div><div style="position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 32px; height: 32px; background-image: url(https://www.google.com.hk/logos/2014/rubiks/sprite-ui.png); background-size: 49px 688px; display: inline-block; cursor: pointer; margin: 0px 0px 4px 4px; background-position: 0px -522px; background-repeat: no-repeat no-repeat;"></div></div></div>
+
+
+
+
+    <div id="bg"></div>
+    <div id="container"></div>
+    <div id="fail">
+      <img src="media/static-cube.png"/>
+      <div id="upgradeText" class="bubble fadeTransition">
+        <div class="upgradetext">To play, please use the latest version of one of the following browsers</div>
+        <br><br>
+        <a class="upgradetext" href="https://www.google.com/chrome/browser/" target="_blank">Chrome</a><br>
+        <a class="upgradetext" href="https://www.mozilla.org/firefox" target="_blank">Firefox</a><br>
+        <a class="upgradetext" href="https://www.apple.com/safari" target="_blank">Safari</a><br>
+        <span class="pointerleft SPRITE_carrot_down_2x"></span>
+      </div>
+    </div>
+    <div id="uipanel" class="fadeTransition">
+      <div id="movecounter">0</div>
+      <div id="buttonpanel">
+        <div id="sharebubble" class="fadeTransition" style="opacity:0">
+          <input id="shareshortlink" type="text" value="google.com/doodles" readonly="readonly"/>
+          <div id="sharegplus" class="bubbleicon SPRITE_google_plus_64_2x"></div>
+          <div id="sharefacebook" class="bubbleicon SPRITE_facebook_64_2x"></div>
+          <div id="sharetwitter" class="bubbleicon SPRITE_twitter_64_2x"></div>
+          <div id="shareemail" class="bubbleicon SPRITE_email_64_2x"></div>
+        </div>
+        <div id="uibuttons">
+          <div id="sharebutton" class="bubbleicon SPRITE_share_64_2x"></div>
+          <div id="helpbutton" class="bubbleicon SPRITE_help_64_2x"></div>
+          <div id="searchbutton" class="bubbleicon SPRITE_search_64_2x"></div>
+        </div>
+      </div>
+      <div id="helpbubble" class="bubble" style="display:none">
+        <span class="pointerup SPRITE_carrot_grey_up_2x"></span>
+        <div id="helpimage" class="one"></div>
+        <div id="helptext" class="helptext"></div>
+        <div id="helpnext" class="helptext"></div>
+        <span class="pointerdown SPRITE_carrot_down_2x"></span><br>
+      </div>
+    </div>
+    <script charset="utf-8" src="scripts/iecss3d.js"></script>
+    <script charset="utf-8" src="scripts/ierenderer.js"></script>
+    <script charset="utf-8" src="scripts/deviceMotion.js"></script>
+    <script charset="utf-8" src="scripts/locked.js"></script>
+    <!-- Certificate js -->
+    <script charset="utf-8" src="scripts/textBox.js"></script>
+    <script charset="utf-8" src="scripts/ResizeableTextBox.js"></script>
+    <script charset="utf-8" src="scripts/divBox.js"></script>
+    <script charset="utf-8" src="scripts/frames.js"></script>
+    <script charset="utf-8" src="scripts/certificate.js"></script>
+    <script charset="utf-8" src="scripts/main.js"></script>
+  </body>
+</html>

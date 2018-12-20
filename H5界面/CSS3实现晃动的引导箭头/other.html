@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3箭头引导-轩枫阁</title>
+<style>
+
+li{
+	width: 300px;
+	height: 300px;
+	background-color: #b10dc9;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 18px;
+	line-height: 140px;
+	color: #fff;
+	list-style: none outside none;
+}
+li a{
+	position: relative;
+	height: 100%;
+	display: block;
+	color: #fff;
+	background: transparent;
+	text-decoration: none;
+}
+li a:after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #ccc;
+	border-width: 0 1px 1px 0;
+	left: 50%;
+	top: 100px; 
+	-webkit-transform: rotate(45deg) translate(-50%, 0);
+	transform: rotate(45deg) translate(-50%, 0);
+	-webkit-animation: arrowGo 5s infinite steps(10, end);
+	animation: arrowGo 5s infinite steps(10, end)
+}
+@-webkit-keyframes arrowGo {
+	0%{
+		opacity: 0.5; 
+		-webkit-transform-origin: center center; 
+		-webkit-transform: rotate(45deg) translate(-50%, 0)
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform-origin:center center;
+		-webkit-transform: rotate(45deg) translate(-50%, 0) scale(2);
+		top: 280px
+	}
+}
+@keyframes arrowGo {
+	0% {
+		opacity: 0.5;
+		transform-origin: center center;
+		transform: rotate(45deg) translate(-50%, 0)
+	}
+	100% {
+		opacity: 1;
+		transform-origin: center center;
+		transform: rotate(45deg) translate(-50%, 0) scale(2);
+		top: 280px;
+	}
+}
+</style>
+</head>
+<body>
+	<li><a href="#simple_intro">十分钟入门</a></li>
+
+
+
+	<a href="http://www.xuanfengge.com">轩枫阁</a>
+</body>
+</html>

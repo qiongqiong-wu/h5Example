@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>复选框样式美化-jq22.com</title>
+		<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+		<style>
+			/*------------------Checkbox----------------------*/
+
+			.checkboxWrapper {
+				display: block;
+				padding-left: 80px;
+				/* you can replace with 'display:inline-block' if you want parent element inline */
+			}
+
+			.checkboxWrapper input[type="checkbox"] {
+				display: none;
+			}
+
+			.checkboxWrapper input[type="checkbox"]+label {
+				cursor: pointer;
+				display: block;
+			}
+
+			.checkboxWrapper input[type="checkbox"]+label i {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.checkboxWrapper input[type="checkbox"]+label path {
+				stroke-dashoffset: -189;
+				stroke: inherit;
+				stroke-dasharray: 189;
+				transition: all ease-in-out 0.5s;
+				-webkit-transition: all ease-in-out 0.5s;
+				-moz-transition: all ease-in-out 0.5s;
+				-ms-transition: all ease-in-out 0.5s;
+				-o-transition: all ease-in-out 0.5s;
+			}
+
+			.checkboxWrapper input[type="checkbox"]:checked+label path {
+				stroke-dashoffset: 0;
+			}
+			/*----------------------color------------------------*/
+			/* Turquoise theme */
+
+			.theme1 {
+				stroke: #FF0000;
+			}
+			/**/
+			/* Emerald theme */
+
+			.theme2 {
+				stroke: #2ECC71;
+			}
+			/**/
+			/* Peterriver theme */
+
+			.theme3 {
+				stroke: #3498DB;
+			}
+			/**/
+			/* Amethyst theme */
+
+			.theme4 {
+				stroke: #9B59B6;
+			}
+			/**/
+			/* Wet Asphalt theme */
+
+			.theme5 {
+				stroke: #34495E;
+			}
+			/**/
+			/* Carrot theme */
+
+			.theme6 {
+				stroke: #E67E22;
+			}
+			/**/
+			/* Alizarin theme */
+
+			.theme7 {
+				stroke: #E74C3C;
+			}
+
+			.theme8 {
+				stroke: blue;
+			}
+			/**/
+			/*-----------------------size------------------------------*/
+
+			.tweentyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			.thirtyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 30px;
+				height: 30px;
+			}
+
+			.fortyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 40px;
+				height: 40px;
+			}
+
+			.fiftyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 50px;
+				height: 50px;
+			}
+
+			.sixtyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 60px;
+				height: 60px;
+			}
+
+			.seventyCheckboxSize.checkboxWrapper input[type="checkbox"]+label i svg {
+				width: 60px;
+				height: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="checkboxWrapper theme8" style="margin-top: 100px;">
+			<input type="checkbox" id="sample1">
+			<label for="sample1">
+                     <i>
+                      <svg width="20px" height="20px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                        <circle fill="none" stroke="#ccc" stroke-width="4" stroke-miterlimit="10" cx="25.11" cy="24.883" r="23.519"></circle>
+                        <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M48.659,25c0,12.998-10.537,23.534-23.534,23.534
+                        S1.591,37.998,1.591,25S12.127,1.466,25.125,1.466c9.291,0,17.325,5.384,21.151,13.203L19,36l-9-14"></path>
+                     </svg>
+                     </i>
+                       &nbsp;&nbsp;选择
+                 </label>
+		</div>
+
+	</body>
+
+</html>

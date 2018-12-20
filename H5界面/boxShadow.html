@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>box-shadow阴影</title>
+		<style type="text/css">
+			/**
+			 * 第一个值控制水平偏移，正值向右，负值向左
+             * 第二个值控制垂直偏移，正值向下，负值向上
+             * 第三个值控制模糊半径，不允许负值，数值越大阴影的边缘越模糊
+             * 第四个值控制扩展范围
+             * 最后一个值控制阴影颜色，省略则继承color 属性的颜色
+             * 可以添加多个阴影，用逗号隔开
+             * 可以使用inset设置内阴影
+			 */
+			body {
+				font-family: 'helvetica neue', 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+				text-align: center;
+				background-color: #eee;
+				color: #333;
+			}
+
+			a {
+				color: #333;
+				text-decoration: none;
+			}
+
+			#box {
+				height: 100px;
+				line-height: 100px;
+				width: 100px;
+				background: lightblue;
+				margin: 10em auto;
+				box-shadow: -10px -5px 10px 20px #333;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+
+	</body>
+</html>

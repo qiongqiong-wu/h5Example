@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>商城</title>
+		<link rel="stylesheet" type="text/css" href="css/loaders.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<style type="text/css">
+			#wrapper {
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+			}
+			
+			.scroller {
+				background-color: #f2f2f2;
+			}
+			
+			.more {
+				height: 45px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #333
+			}
+			
+			.pull_icon {
+				width: 25px;
+				height: 25px;
+				background-image: url(images/pull.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 25px;
+				transition: all .5s
+			}
+			
+			.more span {
+				padding-left: 18px
+			}
+			
+			.more .flip {
+				transform: rotate(180deg)
+			}
+			
+			.loading {
+				background-image: url(images/pull.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 25px
+			}
+			
+			.more .loading {
+				-webkit-transform: rotate(0deg) translateZ(0);
+				-webkit-transition-duration: 0;
+				-webkit-animation-name: loading;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear
+			}
+			
+			@-webkit-keyframes loading {
+				from {
+					-webkit-transform: rotate(0deg) translateZ(0)
+				}
+				to {
+					-webkit-transform: rotate(360deg) translateZ(0)
+				}
+			}
+		</style>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$( window ).load( function () {
+				$( ".loading" ).addClass( "loader-chanage" )
+				$( ".loading" ).fadeOut( 300 )
+			} )
+		</script>
+	</head>
+
+	<body>
+		<!--loading页开始-->
+		<div class="loading">
+			<div class="loader">
+				<div class="loader-inner pacman">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<!--loading页结束-->
+		<header class="detail-header fixed-header justifly flexbox">
+			<a class="icona" href="javascript:history.go(-1)"><img src="images/left.png" /></a>
+			<h3>
+				商品
+			</h3>
+			<a href="shopcar.html" class="right"><img src="images/shopbar.png" /></a>
+		</header>
+		<div class="contaniner fixed-contb">
+			<section class="detail">
+				<figure class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#"> <img src="images/detail-ban02.png" /> </a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#"> <img src="images/detail-ban01.png" /> </a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#"> <img src="images/detail-ban03.png" /> </a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#"> <img src="images/detail-ban04.png" /> </a>
+						</li>
+					</ul>
+					<div class="swiper-pagination"> </div>
+				</figure>
+				<dl class="jiage"> <dt>
+					<h3>2015冬季新款韩版加厚中长款小鹿毛呢大衣女系带加厚羊毛呢外套</h3>
+					<div class="collect">
+						<img src="images/detail-heart-hei.png"/>
+						<p>收藏</p>
+					</div>
+				</dt>
+					<dd> <b>￥28.99</b> <del>￥139</del> <input type="button" value="￥10.00" readonly />						<small>+356积分</small> </dd>
+				</dl>
+				<div class="chose">
+					<ul>
+						<h3>颜色</h3>
+						<li> 黑色 </li>
+						<li> 粉色 </li>
+						<li> 灰色 </li>
+						<li> 红色 </li>
+					</ul>
+					<ul>
+						<h3>尺寸</h3>
+						<li> L </li>
+						<li> XL </li>
+						<li> XXL </li>
+					</ul>
+				</div>
+				<a href="#" class="seven"> <b>7</b>天无理由退换货 <span id="sss"></span> </a>
+				<ul class="same">
+					<a href="#"> <span>
+						同类推荐
+					</span>
+						<li class="one"> <img src="images/detail-pp01.png" />
+							<p>￥188.00</p>
+						</li>
+						<li> <img src="images/detail-pp02.png" />
+							<p>￥188.00</p>
+						</li>
+						<li> <img src="images/detail-pp03.png" />
+							<p>￥188.00</p>
+						</li>
+						<li> <img src="images/detail-pp04.png" />
+							<p>￥188.00</p>
+						</li>
+					</a>
+				</ul>
+			</section>
+			<article class="detail-article">
+				<nav>
+					<ul class="article">
+						<li id="talkbox1" class="article-active">商品详情</li>
+						<li id="talkbox2">评价</li>
+					</ul>
+				</nav>
+				<section class="talkbox1">
+					<div id="wrapper" class="tab_cont">
+						<div class="scroller">
+							<ul class="talk">
+								<li>
+									<dl> <dt>
+								</dt>
+										<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+								</li>
+								<li>
+									<dl> <dt>
+								</dt>
+										<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+								</li>
+								<li>
+									<dl> <dt>
+								</dt>
+										<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+								</li>
+								<li>
+									<dl> <dt>
+								</dt>
+										<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+								</li>
+								<li>
+									<dl> <dt>
+								</dt>
+										<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+								</li>
+							</ul>
+							<div class="more"> <i class="pull_icon"></i> <span>上拉查看评价...</span> </div>
+						</div>
+					</div>
+				</section>
+				<section class="talkbox2" style="display: none;">
+					<ul class="talk">
+						<li>
+							<figure><img src="images/detail-tou.png" /></figure>
+							<dl> <dt>
+									<p>瑾晨</p>
+									<time>2015.11.17</time>
+									<div class="star">
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+									</div>
+								</dt>
+								<dd>哎哟不错哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+						</li>
+						<li>
+							<figure><img src="images/detail-tou.png" /></figure>
+							<dl> <dt>
+									<p>瑾晨</p>
+									<time>2015.11.17</time>
+									<div class="star">
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+									</div>
+								</dt>
+								<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small>
+								<div class="picbox"> <img src="images/detail-pp01.png" /> <img src="images/detail-pp02.png" />									<img src="images/detail-pp03.png" /> <img src="images/detail-pp04.png" />									</div>
+							</dl>
+						</li>
+						<li>
+							<figure><img src="images/detail-tou.png" /></figure>
+							<dl> <dt>
+									<p>瑾晨</p>
+									<time>2015.11.17</time>
+									<div class="star">
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+									</div>
+								</dt>
+								<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+						</li>
+						<li>
+							<figure><img src="images/detail-tou.png" /></figure>
+							<dl> <dt>
+									<p>瑾晨</p>
+									<time>2015.11.17</time>
+									<div class="star">
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+									</div>
+								</dt>
+								<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small>
+								<div class="picbox"> <img src="images/detail-pp01.png" /> <img src="images/detail-pp02.png" />									<img src="images/detail-pp03.png" /> <img src="images/detail-pp04.png" />									</div>
+							</dl>
+						</li>
+						<li>
+							<figure><img src="images/detail-tou.png" /></figure>
+							<dl> <dt>
+									<p>瑾晨</p>
+									<time>2015.11.17</time>
+									<div class="star">
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn01.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+										<span><img src="images/detail-iocn001.png"/></span>
+									</div>
+								</dt>
+								<dd>哎哟不错哦，很性感哦！</dd> <small>颜色：豹纹凯特</small> </dl>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</div>
+		<footer class="detail-footer fixed-footer">
+			<a href="#" class="go-car"> <input type="button" value="加入购物车" /> </a>
+			<a href="buy.html" class="buy"> 立即购买 </a>
+		</footer>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$( window ).scroll( function () {
+				if ( $( ".detail-header" ).offset().top > 50 ) {
+					$( ".detail-header h3" ).css( 'visibility', 'visible' );
+					$( ".detail-header" ).addClass( "change" );
+				} else {
+					$( ".detail-header h3" ).css( 'visibility', 'hidden' )
+					$( ".detail-header" ).removeClass( "change" );
+				}
+			} );
+		</script>
+		<script type="text/javascript">
+			$( document ).ready( function () {
+				var mySwiper = new Swiper( '.swiper-container', {
+					loop: true,
+					speed: 1000,
+					autoplay: 2000,
+					pagination: '.swiper-pagination',
+				} );
+			} )
+		</script>
+		<script type="text/javascript">
+			$( function () {
+				$( '.chose li' ).click( function () {
+					$( this ).addClass( 'chose-active' ).siblings().removeClass(
+						'chose-active' );
+					var tags = document.getElementsByClassName( 'chose-active' ); //获取标签
+					var tagArr = "";
+					for ( var i = 0; i < tags.length; i++ )
+					{
+						tagArr += tags[ i ].innerHTML; //保存满足条件的元素
+					}
+					$( '#sss' ).html( tagArr );
+				} );
+				var myscroll = new iScroll( "wrapper", {
+					onScrollMove: function () {
+						if ( ( this.y + 70 ) < ( this.maxScrollY ) ) {
+							$( '.pull_icon' ).addClass( 'flip' );
+						} else {
+							$( '.pull_icon' ).removeClass( 'flip loading' );
+						}
+					},
+					onScrollEnd: function () {
+						if ( $( '.pull_icon' ).hasClass( 'flip' ) ) {
+							pullUpAction();
+						}
+					},
+					onRefresh: function () {
+						$( '.more' ).removeClass( 'flip' );
+					}
+				} );
+
+				function pullUpAction() {
+					setTimeout( function () {
+						$( '#talkbox1' ).removeClass( 'article-active' );
+						$( '#talkbox2' ).addClass( 'article-active' );
+						$( '.talkbox1' ).hide();
+						$( '.talkbox2' ).show();
+					}, 400 )
+				}
+				$( '.article li' ).click( function () {
+					$( this ).addClass( 'article-active' ).siblings().removeClass(
+						'article-active' );
+					if ( $( this ).attr( "id" ) == "talkbox1" ) {
+						$( '.talkbox1' ).show();
+						$( '.talkbox2' ).hide();
+					} else {
+						$( '.talkbox2' ).show();
+						$( '.talkbox1' ).hide();
+					}
+				} );
+			} );
+		</script>
+	</body>
+
+</html>

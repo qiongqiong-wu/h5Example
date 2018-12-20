@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>纯CSS写三角形-border法</title>
+		<meta name="author" content="jQuery" />
+		<meta name="description" content="纯CSS写三角形-border法" />
+		<meta name="keywords" content="纯CSS写三角形-border法" />
+		<meta name="apple-mobile-web-app-title" content="纯CSS写三角形-border法" />
+		<!-- 适应移动端start -->
+		<!-- width viewport 宽度(数值/device-width)
+        height viewport 高度(数值/device-height)
+        initial-scale 初始缩放比例
+        maximum-scale 最大缩放比例
+        minimum-scale 最小缩放比例
+        user-scalable 是否允许用户缩放(yes/no)
+        minimal-ui iOS 7.1 beta 2 中新增属性，在页面加载时最小化上下状态栏
+     -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+		/>
+		<!-- 删除苹果默认的工具栏和菜单栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 设置苹果工具栏颜色 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+		<meta name="format-detection" content="telphone=no, email=no" />
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--	<meta http-equiv="X-Frame-Options" content="ALLOW-FROM URI">-->
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 适应移动端end -->
+		<!-- 浏览网站时的小图标 -->
+		<link href="images/app_logo.png" rel="shortcut icon" type="/image/x-icon" />
+		<!-- 添加至主屏时的图片 -->
+		<link href="images/app_logo.png" rel="apple-touch-icon-precomposed" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<style type="text/css">
+			/*向上*/
+			
+			.triangle_border_up {
+				width: 0;
+				height: 0;
+				border-width: 0 30px 30px;
+				border-style: solid;
+				border-color: transparent transparent #333;
+				/*透明 透明  灰*/
+				margin: 60px auto;
+				position: relative;
+			}
+			
+			.triangle_border_up span {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 0 28px 28px;
+				border-style: solid;
+				border-color: transparent transparent #fc0;
+				/*透明 透明  黄*/
+				position: absolute;
+				top: 1px;
+				left: -28px;
+			}
+			/*向下*/
+			
+			.triangle_border_down {
+				width: 0;
+				height: 0;
+				border-width: 30px 30px 0;
+				border-style: solid;
+				border-color: #333 transparent transparent;
+				/*灰 透明 透明 */
+				margin: 40px auto;
+				position: relative;
+			}
+			
+			.triangle_border_down span {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 28px 28px 0;
+				border-style: solid;
+				border-color: #fc0 transparent transparent;
+				/*黄 透明 透明 */
+				position: absolute;
+				top: -29px;
+				left: -28px;
+			}
+			/*向左*/
+			
+			.triangle_border_left {
+				width: 0;
+				height: 0;
+				border-width: 30px 30px 30px 0;
+				border-style: solid;
+				border-color: transparent #333 transparent transparent;
+				/*透明 灰 透明 透明 */
+				margin: 40px auto;
+				position: relative;
+			}
+			
+			.triangle_border_left span {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 28px 28px 28px 0;
+				border-style: solid;
+				border-color: transparent #fc0 transparent transparent;
+				/*透明 黄 透明 透明 */
+				position: absolute;
+				top: -28px;
+				left: 1px;
+			}
+			/*向右*/
+			
+			.triangle_border_right {
+				width: 0;
+				height: 0;
+				border-width: 30px 0 30px 30px;
+				border-style: solid;
+				border-color: transparent transparent transparent #333;
+				/*透明 透明 透明 灰*/
+				margin: 40px auto;
+				position: relative;
+			}
+			
+			.triangle_border_right span {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 28px 0 28px 28px;
+				border-style: solid;
+				border-color: transparent transparent transparent #fc0;
+				/*透明 透明 透明 黄*/
+				position: absolute;
+				top: -28px;
+				left: -29px;
+			}
+			
+			.test_triangle_border {
+				width: 200px;
+				margin: 0 auto 20px;
+				position: relative;
+			}
+			
+			.test_triangle_border a {
+				color: #333;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			
+			.test_triangle_border .popup {
+				width: 100px;
+				background: #fc0;
+				padding: 10px 20px;
+				color: #333;
+				border-radius: 4px;
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				border: 1px solid #333;
+			}
+			
+			.test_triangle_border .popup span {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 0 10px 10px;
+				border-style: solid;
+				border-color: transparent transparent #333;
+				position: absolute;
+				top: -10px;
+				left: 50%;
+				/* 三角形居中显示 */
+				margin-left: -10px;
+				/* 三角形居中显示 */
+			}
+			
+			.test_triangle_border .popup em {
+				display: block;
+				width: 0;
+				height: 0;
+				border-width: 0 10px 10px;
+				border-style: solid;
+				border-color: transparent transparent #fc0;
+				position: absolute;
+				top: 1px;
+				left: -10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--loading页开始-->
+		<div class="loading">
+			<div class="loader"> </div>
+		</div>
+		<div class="header">
+			<div class="navbar flexbox justifly">
+				<div class="nav_menu nav_left fl"></div>
+				<div class="nav_title tc">纯CSS写三角形-border法</div>
+				<div class="nav_menu nav_right fr hidden"></div>
+			</div>
+		</div>
+		<div class="container">
+			<!-- 向上的三角形 -->
+			<div class="triangle_border_up"> <span></span> </div>
+			<!-- 向下的三角形 -->
+			<div class="triangle_border_down"> <span></span> </div>
+			<!-- 向左的三角形 -->
+			<div class="triangle_border_left"> <span></span> </div>
+			<!-- 向右的三角形 -->
+			<div class="triangle_border_right"> <span></span> </div>
+			<div class="test_triangle_border">
+				<a href="#">三角形</a>
+				<div class="popup"> <span><em></em></span>纯CSS写带边框的三角形 </div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/screenAdaptation.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

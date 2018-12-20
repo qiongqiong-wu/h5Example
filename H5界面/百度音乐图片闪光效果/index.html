@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度音乐图片闪光效果</title>
+	<style>
+body{
+	margin: 0;
+	padding:0;
+	background: #333;
+}
+.arc_img{
+	width: 160px;
+	height: 160px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin:200px auto;
+	box-shadow: 0 0 10px #FFF;
+}
+.light{
+	cursor:pointer;
+	position: absolute;
+	left: -100px;
+	top: 0;
+	width: 160px;
+	height: 160px;
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	transform: skewx(-25deg);
+	-o-transform: skewx(-25deg);
+	-moz-transform: skewx(-25deg);
+	-webkit-transform: skewx(-25deg);
+	
+}
+.arc_img:hover .light{
+	left:120px;
+	-moz-transition:0.2s;
+	-o-transition:0.2s;
+	-webkit-transition:0.2s;
+	transition:0.2s;
+}
+
+	</style>
+</head>
+<body>
+	<div class="arc_img">
+		<a href="#">
+			<img src="test.png" alt="LEE图库">
+		</a>
+        <i class="light"></i>
+    </div>
+</body>
+</html>

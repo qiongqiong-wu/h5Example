@@ -1,0 +1,167 @@
+html,
+body {
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: Microsoft Yahei;
+	position: relative;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #666666;
+}
+
+a,
+img {
+	border: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	background: #fff;
+	width: 100%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	border-bottom: 2px solid #f1f1f1;
+	z-index: 999;
+}
+
+.menu-title {
+	width: calc(100% - 4rem);
+	line-height: 0.90rem;
+	padding: 0 2.0rem;
+	font-size: 0.32rem;
+	font-family: PingFangSC-Semibold;
+	color: #323232;
+	text-align: center;
+}
+
+.menu-left {
+	float: left;
+	width: 1.0rem;
+	height: 0.9rem;
+	z-index: 9;
+	background: url('../images/back.png') no-repeat center;
+	background-size: 0.25rem 0.42rem;
+}
+
+.menu-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 0.9rem;
+	width: 1.0rem;
+	z-index: 9;
+	transform: rotate(180deg);
+	background: url('../images/back.png') no-repeat center;
+	background-size: 0.25rem 0.42rem;
+}
+
+.content {
+	position: relative;
+	top: 0.90rem;
+}
+
+
+/*浮动层*/
+
+.fl-shadow {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.bg-shadow {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 8;
+	background: #000;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+}
+
+.shadow-box {
+	position: absolute;
+	z-index: 10;
+	background: #fff;
+	width: 100%;
+	bottom: 0;
+}
+
+.shadow-titlebar {
+	height: 0.80rem;
+	font-size: 0.32rem;
+	overflow: hidden;
+}
+
+.shadow-titlebar:after {
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+.shadow-titlebar .title {
+	width: calc(100% - 2.40rem);
+	line-height: 0.80rem;
+	padding: 0 1.2rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.32rem;
+	color: #646464;
+	text-align: center;
+}
+
+.shadow-titlebar .close {
+	width: 0.8rem;
+	height: 0.80rem;
+	background: url('../images/back.png') no-repeat center;
+	background-size: 0.22rem 0.40rem;
+}
+
+.shadow-titlebar .cancel {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	width: 0.8rem;
+	height: 0.80rem;
+	background: url('../images/cancel.png') no-repeat center;
+	background-size: 0.48rem 0.60rem;
+}

@@ -1,0 +1,68 @@
+.transaction-password {
+	height: 0.9em;
+	padding: 0 0.26rem;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.item-value {
+	line-height: 0.9rem;
+	font-size: 0.28rem;
+	font-family: Arial;
+}
+
+.item-right {
+	width: 0.48rem;
+	height: 0.90rem;
+	background: url('../images/arrow-right.png') no-repeat center;
+	background-size: 0.22rem 0.28rem;
+}
+
+.shadow-titlebar {
+	border-bottom: 2px solid #f7f5f7;
+}
+
+.shadow-content ul {
+	padding-bottom: 0.30rem;
+}
+
+.shadow-content ul li {
+	padding: 0 0.24rem;
+	height: 1.20rem;
+	border-bottom: 1px solid #f7f5f7;
+}
+
+.shadow-content ul li .item-logo {
+	width: 0.36rem;
+	height: 1.20rem;
+}
+
+.shadow-content ul li .item-operate {
+	width: 0.36rem;
+	height: 1.20rem;
+}
+
+.shadow-content ul li .item-value {
+	line-height: 1.20rem;
+}
+
+.shadow-content ul li .wc {
+	background: url('../images/icon_wc_payment.png') no-repeat center;
+	background-size: 0.36rem 0.36rem;
+	padding-right: 0.20rem;
+}
+
+.shadow-content ul li .add-bc {
+	background: url('../images/icon_bc_payment.png') no-repeat center;
+	background-size: 0.36rem 0.36rem;
+	padding-right: 0.20rem;
+}
+
+.shadow-content ul li .choice {
+	background: url('../images/select.png') no-repeat center;
+	background-size: 0.36rem 0.36rem;
+}
+
+.shadow-content ul li .add {
+	background: url('../images/add.png') no-repeat center;
+	background-size: 0.36rem 0.36rem;
+}
